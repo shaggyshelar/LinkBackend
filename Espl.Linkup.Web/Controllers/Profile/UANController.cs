@@ -65,8 +65,11 @@ namespace Espl.Linkup.Web.Controllers.Profile
         }
 
         // DELETE: api/UAN/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
+            UAN result = UANlist.Where(p => p.ID == id).FirstOrDefault();
+            var resultflag = UANlist.Remove(result);
+            return Ok(resultflag);
         }
     }
 }

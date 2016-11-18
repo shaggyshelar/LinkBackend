@@ -43,6 +43,10 @@
     <Compile Include="Core\BaseSearch.cs" />
     <Compile Include="Core\BaseSearchResult.cs" />
     <Compile Include="Core\IBaseDao.cs" />
+    <Compile Include="Project\Task\Task.cs" />
+    <Compile Include="Project\Task\TaskSearch.cs" />
+    <Compile Include="Project\Project.cs" />
+    <Compile Include="Project\ProjectSearch.cs" />
     <Compile Include="Corporate\Ticket\Ticket.cs" />
     <Compile Include="Corporate\Ticket\TicketSearch.cs" />
     <Compile Include="Leave\Leave.cs" />
@@ -78,6 +82,8 @@
     <Compile Include="Profile\Achievement\Achievement.cs" />
     <Compile Include="Profile\Achievement\AchievementSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Timesheet\Timesheet.cs" />
+    <Compile Include="Timesheet\TimesheetSearch.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Espl.Linkup.Common\Espl.Linkup.Common.csproj">

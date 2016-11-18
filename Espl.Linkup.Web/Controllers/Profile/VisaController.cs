@@ -10,45 +10,60 @@ namespace Espl.Linkup.Web.Controllers.Profile
 {
     public class VisaController : ApiController
     {
-
+        static List<Visa> visaList = new List<Visa>();
         public IHttpActionResult Get()
         {
-            List<Visa> visaList = new List<Visa>();
+
             visaList.Add(new Visa
             {
                 VisaNumber = "123456",
                 ExpDate = new DateTime(12, 12, 2020),
-                Comments = "Dood Work",
-                VisaType="L1",
+                Comments = "Good Work",
+                VisaType = "L1",
                 ID = 1
             });
 
+            visaList.Add(new Visa
+            {
+                VisaNumber = "123456",
+                ExpDate = new DateTime(12, 12, 2020),
+                Comments = "Good Work",
+                VisaType = "H1",
+                ID = 2
+            });
             return Ok(visaList);
         }
 
         public IHttpActionResult Get(int id)
         {
-            return Ok(new Visa
-            {
-                ID = 1,
-                VisaNumber = "123456",
-                Status = "Approved",
-                Comments = "Done"
-            });
+            var result = visaList.Where(p => p.ID == id).FirstOrDefault();
+            return Ok(result);
         }
         // POST: api/Visa
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post(Visa value)
         {
+            visaList.Add(value);
+            value.ID = visaList.Count;
+            return Ok(value);
         }
 
         // PUT: api/Visa/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, Visa value)
         {
+            Visa result = visaList.Where(p => p.ID == id).FirstOrDefault();
+            result.VisaNumber = value.VisaNumber;
+            result.ExpDate = new DateTime(12, 12, 2020);
+            result.Comments = value.Comments;
+            result.VisaType = value.VisaType;
+            return Ok(result);
         }
 
         // DELETE: api/Visa/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
+            Visa result = visaList.Where(p => p.ID == id).FirstOrDefault();
+            var resultflag = visaList.Remove(result);
+            return Ok(resultflag);
         }
     }
 }

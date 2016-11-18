@@ -68,8 +68,6 @@ namespace Espl.Linkup.Web.Controllers.Leaves
             result.Status = result.Status;
             result.StartDate = result.StartDate;
             result.EndDate = result.EndDate;
-            leaveList.Add(result);
-            result.ID = leaveList.Count;
             return Ok(result);
         }
 

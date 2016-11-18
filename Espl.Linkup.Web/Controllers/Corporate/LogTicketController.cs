@@ -10,12 +10,12 @@ namespace Espl.Linkup.Web.Controllers.Corporate
 {
     public class LogTicketController : ApiController
     {
-        static List<Ticket> TicketList = new List<Ticket>();
+        static List<Ticket> ticketList = new List<Ticket>();
         // GET: api/LogTicket
         public IHttpActionResult Get()
         {
 
-            TicketList.Add(new Ticket
+            ticketList.Add(new Ticket
             {
                 Concern = "Software Installation",
                 Department = "IT",
@@ -28,13 +28,13 @@ namespace Espl.Linkup.Web.Controllers.Corporate
                 ID = 1
             });
 
-            return Ok(TicketList);
+            return Ok(ticketList);
         }
 
         // GET: api/LogTicket/5
         public IHttpActionResult Get(int id)
         {
-            var result = TicketList.Where(p => p.ID == id).FirstOrDefault();
+            var result = ticketList.Where(p => p.ID == id).FirstOrDefault();
             return Ok(result);
         }
 
@@ -50,8 +50,8 @@ namespace Espl.Linkup.Web.Controllers.Corporate
             result.Status = value.Status;
             result.Isclosed = value.Isclosed;
             result.IsReopen = value.IsReopen;
-            TicketList.Add(result);
-            result.ID = TicketList.Count;
+            ticketList.Add(result);
+            result.ID = ticketList.Count;
             return Ok(true);
         }
 
@@ -59,7 +59,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate
         public IHttpActionResult Put(int id, Ticket value)
         {
 
-            Ticket result = TicketList.Where(p => p.ID == id).FirstOrDefault();
+            Ticket result = ticketList.Where(p => p.ID == id).FirstOrDefault();
             result.Concern = value.Concern;
             result.Department = value.Department;
             result.Description = value.Description;
@@ -68,16 +68,14 @@ namespace Espl.Linkup.Web.Controllers.Corporate
             result.Status = value.Status;
             result.Isclosed = value.Isclosed;
             result.IsReopen = value.IsReopen;
-            TicketList.Add(result);
-            result.ID = TicketList.Count;
             return Ok(result);
         }
 
         // DELETE: api/LogTicket/5
         public IHttpActionResult Delete(int id)
         {
-            Ticket result = TicketList.Where(p => p.ID == id).FirstOrDefault();
-            var resultflag = TicketList.Remove(result);
+            Ticket result = ticketList.Where(p => p.ID == id).FirstOrDefault();
+            var resultflag = ticketList.Remove(result);
             return Ok(resultflag);
         }
     }

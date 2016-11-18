@@ -60,8 +60,6 @@ namespace Espl.Linkup.Web.Controllers.Leave.Holidays
             result.WeekDay = value.WeekDay;
             result.HolidayType = value.HolidayType;
             result.HolidayDate = new DateTime().AddDays(5);
-            holidayList.Add(result);
-            result.ID = holidayList.Count;
             return Ok(result);
         }
 

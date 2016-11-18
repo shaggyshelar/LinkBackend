@@ -76,11 +76,15 @@
     <Compile Include="Profile\Experience\IExperienceSearch.cs" />
     <Compile Include="Profile\Visa\IVisa.cs" />
     <Compile Include="Profile\Visa\IVisaSearch.cs" />
+    <Compile Include="Project\IProject.cs" />
+    <Compile Include="Project\IProjectSearch.cs" />
+    <Compile Include="Project\Task\ITask.cs" />
+    <Compile Include="Project\Task\ITaskSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Timesheet\ITimesheet.cs" />
+    <Compile Include="Timesheet\ITimesheetSearch.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Timesheet\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

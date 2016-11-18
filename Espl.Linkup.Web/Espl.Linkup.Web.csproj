@@ -139,6 +139,9 @@
     <Compile Include="Controllers\Profile\SkillController.cs" />
     <Compile Include="Controllers\Profile\UANController.cs" />
     <Compile Include="Controllers\Profile\VisaController.cs" />
+    <Compile Include="Controllers\Project\ProjectController.cs" />
+    <Compile Include="Controllers\Project\Task\TaskController.cs" />
+    <Compile Include="Controllers\Timesheet\TimesheetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
