@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espl.Linkup.Common", "Espl.Linkup.Common\Espl.Linkup.Common.csproj", "{48B9DF28-8CAA-4DB1-B276-F7AC6D97F425}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espl.Linkup.Domain", "Espl.Linkup.Domain\Espl.Linkup.Domain.csproj", "{132A852A-CFC2-49CD-A117-1A113D11E891}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espl.Linkup.Web", "Espl.Linkup.Web\Espl.Linkup.Web.csproj", "{3FFE8DF6-7177-4F66-8464-5E7B6A134D7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espl.Linkup.Web.Tests", "Espl.Linkup.Web.Tests\Espl.Linkup.Web.Tests.csproj", "{66E66F99-F24F-4195-8097-90A78021C91B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48B9DF28-8CAA-4DB1-B276-F7AC6D97F425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48B9DF28-8CAA-4DB1-B276-F7AC6D97F425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48B9DF28-8CAA-4DB1-B276-F7AC6D97F425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48B9DF28-8CAA-4DB1-B276-F7AC6D97F425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{132A852A-CFC2-49CD-A117-1A113D11E891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{132A852A-CFC2-49CD-A117-1A113D11E891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{132A852A-CFC2-49CD-A117-1A113D11E891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{132A852A-CFC2-49CD-A117-1A113D11E891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FFE8DF6-7177-4F66-8464-5E7B6A134D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FFE8DF6-7177-4F66-8464-5E7B6A134D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FFE8DF6-7177-4F66-8464-5E7B6A134D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FFE8DF6-7177-4F66-8464-5E7B6A134D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E66F99-F24F-4195-8097-90A78021C91B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E66F99-F24F-4195-8097-90A78021C91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E66F99-F24F-4195-8097-90A78021C91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E66F99-F24F-4195-8097-90A78021C91B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

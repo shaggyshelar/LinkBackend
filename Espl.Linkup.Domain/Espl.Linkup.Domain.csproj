@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{132A852A-CFC2-49CD-A117-1A113D11E891}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Espl.Linkup.Domain</RootNamespace>
+    <AssemblyName>Espl.Linkup.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\BaseEntity.cs" />
+    <Compile Include="Core\BaseSearch.cs" />
+    <Compile Include="Core\BaseSearchResult.cs" />
+    <Compile Include="Core\IBaseDao.cs" />
+    <Compile Include="Corporate\Ticket\Ticket.cs" />
+    <Compile Include="Corporate\Ticket\TicketSearch.cs" />
+    <Compile Include="Leave\Leave.cs" />
+    <Compile Include="Leave\LeaveSearch.cs" />
+    <Compile Include="Leave\Holiday\HolidaySearch.cs" />
+    <Compile Include="Leave\Holiday\Holiday.cs" />
+    <Compile Include="Leave\LeaveDetail\LeaveDetail.cs" />
+    <Compile Include="Leave\LeaveDetail\LeaveDetailSearch.cs" />
+    <Compile Include="Profile\Visa\Visa.cs" />
+    <Compile Include="Profile\Visa\VisaSearch.cs" />
+    <Compile Include="Profile\UAN\UAN.cs" />
+    <Compile Include="Profile\UAN\UANSearch.cs" />
+    <Compile Include="Profile\Skill\Skill.cs" />
+    <Compile Include="Profile\Skill\SkillSearch.cs" />
+    <Compile Include="Profile\Passport\Passport.cs" />
+    <Compile Include="Profile\Passport\PassportSearch.cs" />
+    <Compile Include="Profile\Nominee\Nominee.cs" />
+    <Compile Include="Profile\Nominee\NomineeSearch.cs" />
+    <Compile Include="Profile\IDProof\IDProof.cs" />
+    <Compile Include="Profile\IDProof\IDProofSearch.cs" />
+    <Compile Include="Profile\Experience\Experience.cs" />
+    <Compile Include="Profile\Experience\ExperienceSearch.cs" />
+    <Compile Include="Profile\EmploymentHistory\EmploymentHistory.cs" />
+    <Compile Include="Profile\EmploymentHistory\EmploymentHistorySearch.cs" />
+    <Compile Include="Profile\Employee\Employee.cs" />
+    <Compile Include="Profile\Employee\EmployeeSearch.cs" />
+    <Compile Include="Profile\Education\Education.cs" />
+    <Compile Include="Profile\Education\EducationSearch.cs" />
+    <Compile Include="Profile\Certification\Certification.cs" />
+    <Compile Include="Profile\Certification\CertificationSearch.cs" />
+    <Compile Include="Profile\Address\Address.cs" />
+    <Compile Include="Profile\Address\AddressSearch.cs" />
+    <Compile Include="Profile\Achievement\Achievement.cs" />
+    <Compile Include="Profile\Achievement\AchievementSearch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Espl.Linkup.Common\Espl.Linkup.Common.csproj">
+      <Project>{48b9df28-8caa-4db1-b276-f7ac6d97f425}</Project>
+      <Name>Espl.Linkup.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

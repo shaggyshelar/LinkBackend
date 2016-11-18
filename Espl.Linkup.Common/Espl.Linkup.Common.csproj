@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48B9DF28-8CAA-4DB1-B276-F7AC6D97F425}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Espl.Linkup.Common</RootNamespace>
+    <AssemblyName>Espl.Linkup.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\IBaseEntity.cs" />
+    <Compile Include="Core\IBaseSearch.cs" />
+    <Compile Include="Core\IBaseSearchResult.cs" />
+    <Compile Include="Corporate\Ticket\ITicket.cs" />
+    <Compile Include="Corporate\Ticket\ITicketSearch.cs" />
+    <Compile Include="Leave\Holiday\IHolidaySearch.cs" />
+    <Compile Include="Leave\Holiday\IHoliday.cs" />
+    <Compile Include="Leave\ILeave.cs" />
+    <Compile Include="Leave\ILeaveSearch.cs" />
+    <Compile Include="Leave\LeaveDetail\ILeaveDetail.cs" />
+    <Compile Include="Leave\LeaveDetail\ILeaveDetailSearch.cs" />
+    <Compile Include="Profile\Address\IAddress.cs" />
+    <Compile Include="Profile\Address\IAddressSearch.cs" />
+    <Compile Include="Profile\Employee\IEmployee.cs" />
+    <Compile Include="Profile\Employee\IEmployeeSearch.cs" />
+    <Compile Include="Profile\Nominee\INominee.cs" />
+    <Compile Include="Profile\Nominee\INomineeSearch.cs" />
+    <Compile Include="Profile\Passport\IPassport.cs" />
+    <Compile Include="Profile\Passport\IPassportSearch.cs" />
+    <Compile Include="Profile\Certification\ICertification.cs" />
+    <Compile Include="Profile\Certification\ICertificationSearch.cs" />
+    <Compile Include="Profile\Achievement\IAchievement.cs" />
+    <Compile Include="Profile\Achievement\IAchievementSearch.cs" />
+    <Compile Include="Profile\Skill\ISkill.cs" />
+    <Compile Include="Profile\Skill\ISkillSearch.cs" />
+    <Compile Include="Profile\UAN\IUAN.cs" />
+    <Compile Include="Profile\UAN\IUANSearch.cs" />
+    <Compile Include="Profile\IDProof\IIDProof.cs" />
+    <Compile Include="Profile\IDProof\IIDProofSearch.cs" />
+    <Compile Include="Profile\Education\IEducation.cs" />
+    <Compile Include="Profile\Education\IEducationSearch.cs" />
+    <Compile Include="Profile\EmploymentHistory\IEmploymentHistory.cs" />
+    <Compile Include="Profile\EmploymentHistory\IEmploymentHistorySearch.cs" />
+    <Compile Include="Profile\Experience\IExperience.cs" />
+    <Compile Include="Profile\Experience\IExperienceSearch.cs" />
+    <Compile Include="Profile\Visa\IVisa.cs" />
+    <Compile Include="Profile\Visa\IVisaSearch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Timesheet\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
