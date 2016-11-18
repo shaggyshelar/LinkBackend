@@ -10,10 +10,11 @@ namespace Espl.Linkup.Web.Controllers.Profile
 {
     public class EmploymentHistoryController : ApiController
     {
+        static List<EmploymentHistory> employmentHistoryList = new List<EmploymentHistory>();
         // GET: api/EmploymentHistory
         public IHttpActionResult Get()
         {
-            List<EmploymentHistory> employmentHistoryList = new List<EmploymentHistory>();
+
             employmentHistoryList.Add(
                 new EmploymentHistory
                 {
@@ -37,24 +38,40 @@ namespace Espl.Linkup.Web.Controllers.Profile
         }
 
         // GET: api/EmploymentHistory/5
-        public string Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return "value";
+            var result = employmentHistoryList.Where(p => p.ID == id).FirstOrDefault();
+            return Ok(result);
         }
 
         // POST: api/EmploymentHistory
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post(EmploymentHistory value)
         {
+            employmentHistoryList.Add(value);
+            value.ID = employmentHistoryList.Count;
+            return Ok(value);
         }
 
         // PUT: api/EmploymentHistory/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, EmploymentHistory value)
         {
+            EmploymentHistory result = employmentHistoryList.Where(p => p.ID == id).FirstOrDefault();
+            result.EmploymentDetail = value.EmploymentDetail;
+            result.Designation = value.Designation;
+            result.StartDate = new DateTime(2012, 06, 12);
+            result.EndDate = new DateTime(2016, 06, 12);
+            result.Duration = value.Duration;
+            result.Status = value.Status;
+            result.Comments = value.Comments;
+            return Ok(result);
         }
 
         // DELETE: api/EmploymentHistory/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
+            EmploymentHistory result = employmentHistoryList.Where(p => p.ID == id).FirstOrDefault();
+            var resultflag = employmentHistoryList.Remove(result);
+            return Ok(resultflag);
         }
     }
 }

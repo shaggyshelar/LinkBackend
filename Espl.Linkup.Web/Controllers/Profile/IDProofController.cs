@@ -10,18 +10,18 @@ namespace Espl.Linkup.Web.Controllers.Profile
 {
     public class IDProofController : ApiController
     {
+        static List<IDProof> IDProofList = new List<IDProof>();
         // GET: api/IDProof
         public IHttpActionResult Get()
         {
-            List<IDProof> IDProofList = new List<IDProof>();
+
             IDProofList.Add(
                 new IDProof
                 {
                     ID = 1,
-                        
-                    IDProofType="Adhar Card",
-                    IDProofFilePath="abc.pdf",
-                    Value="123123123",
+                    IDProofType = "Adhar Card",
+                    IDProofFilePath = "abc.pdf",
+                    Value = "123123123",
                     Status = "Approved",
                     Comments = "Approved",
 
@@ -32,24 +32,38 @@ namespace Espl.Linkup.Web.Controllers.Profile
         }
 
         // GET: api/IDProof/5
-        public string Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return "value";
+            var result = IDProofList.Where(p => p.ID == id).FirstOrDefault();
+            return Ok(result);
         }
 
         // POST: api/IDProof
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post(IDProof value)
         {
+            IDProofList.Add(value);
+            value.ID = IDProofList.Count;
+            return Ok(value);
         }
 
         // PUT: api/IDProof/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, IDProof value)
         {
+            IDProof result = IDProofList.Where(p => p.ID == id).FirstOrDefault();
+            result.IDProofType = value.IDProofType;
+            result.Value = value.Value;
+            result.Status = value.Status;
+            result.Comments = value.Comments;
+            return Ok(result);
         }
 
+
         // DELETE: api/IDProof/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
+            IDProof result = IDProofList.Where(p => p.ID == id).FirstOrDefault();
+            var resultflag = IDProofList.Remove(result);
+            return Ok(resultflag);
         }
     }
 }

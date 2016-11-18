@@ -10,10 +10,12 @@ namespace Espl.Linkup.Web.Controllers.Profile
 {
     public class NomineeController : ApiController
     {
+
+        static List<Nominee> nomineeList = new List<Nominee>();
         // GET: api/Nominee
         public IHttpActionResult Get()
         {
-            return Ok(new Nominee
+            nomineeList.Add(new Nominee
             {
                 ID = 1,
                 FirstNomineeName = "First",
@@ -21,27 +23,50 @@ namespace Espl.Linkup.Web.Controllers.Profile
                 SecondNomineeName = "Second",
                 SecondNomineeRelationWithEmp = "Relation"
             });
+
+            nomineeList.Add(new Nominee
+            {
+                ID = 2,
+                FirstNomineeName = "Third",
+                FirstNomineeRelationWithEmp = "Relation",
+                SecondNomineeName = "Fourth",
+                SecondNomineeRelationWithEmp = "Relation"
+            });
+            return Ok(nomineeList);
         }
 
         // GET: api/Nominee/5
-        public string Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return "value";
+            var result = nomineeList.Where(p => p.ID == id).FirstOrDefault();
+            return Ok(result);
         }
 
         // POST: api/Nominee
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post(Nominee value)
         {
+            nomineeList.Add(value);
+            value.ID = nomineeList.Count;
+            return Ok(value);
         }
 
         // PUT: api/Nominee/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, Nominee value)
         {
+            Nominee result = nomineeList.Where(p => p.ID == id).FirstOrDefault();
+            result.FirstNomineeName = value.FirstNomineeName;
+            result.FirstNomineeRelationWithEmp = value.FirstNomineeRelationWithEmp;
+            result.SecondNomineeName = value.SecondNomineeName;
+            result.SecondNomineeRelationWithEmp = value.SecondNomineeRelationWithEmp;
+            return Ok(result);
         }
 
         // DELETE: api/Nominee/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
+            Nominee result = nomineeList.Where(p => p.ID == id).FirstOrDefault();
+            var resultflag = nomineeList.Remove(result);
+            return Ok(resultflag);
         }
     }
 }

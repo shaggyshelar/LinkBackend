@@ -10,10 +10,10 @@ namespace Espl.Linkup.Web.Controllers.Profile
 {
     public class ExperienceController : ApiController
     {
+        static List<Experience> experienceList = new List<Experience>();
         // GET: api/Experience
         public IHttpActionResult Get()
         {
-            List<Experience> experienceList = new List<Experience>();
             experienceList.Add(
                 new Experience
                 {
@@ -35,24 +35,42 @@ namespace Espl.Linkup.Web.Controllers.Profile
         }
 
         // GET: api/Experience/5
-        public string Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return "value";
+            var result = experienceList.Where(p => p.ID == id).FirstOrDefault();
+            return Ok(result);
         }
 
         // POST: api/Experience
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post(Experience value)
         {
+            experienceList.Add(value);
+            value.ID = experienceList.Count;
+            return Ok(value);
         }
 
         // PUT: api/Experience/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, Experience value)
         {
+            Experience result = experienceList.Where(p => p.ID == id).FirstOrDefault();
+            result.Project = result.Project;
+            result.Client = result.Client;
+            result.Role = result.Role;
+            result.Environment = result.Environment;
+            result.StartDate = new DateTime(2012, 06, 12);
+            result.EndDate = new DateTime(2016, 06, 12);
+            result.Duration = value.Duration;
+            result.Status = value.Status;
+            result.Comments = value.Comments;
+            return Ok(result);
         }
 
         // DELETE: api/Experience/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
+            Experience result = experienceList.Where(p => p.ID == id).FirstOrDefault();
+            var resultflag = experienceList.Remove(result);
+            return Ok(resultflag);
         }
     }
 }

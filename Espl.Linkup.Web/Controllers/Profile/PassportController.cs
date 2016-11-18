@@ -10,11 +10,19 @@ namespace Espl.Linkup.Web.Controllers.Profile
 {
     public class PassportController : ApiController
     {
-  
+        static List<Passport> pasportList = new List<Passport>();
         // GET: api/Passport/5
         public IHttpActionResult Get(int id)
         {
-            return Ok(new Passport
+            var result = pasportList.Where(p => p.ID == id).FirstOrDefault();
+            return Ok(result);
+        }
+
+
+        public IHttpActionResult Get()
+        {
+
+            pasportList.Add(new Passport
             {
                 ID = 1,
                 PassportNumber = "123456",
@@ -22,21 +30,42 @@ namespace Espl.Linkup.Web.Controllers.Profile
                 Status = "Approved",
                 Comments = "upload proper scan copy of both pages"
             });
+            pasportList.Add(new Passport
+            {
+                ID = 2,
+                PassportNumber = "123456",
+                ExpDate = new DateTime(12, 12, 2020),
+                Status = "Approved",
+                Comments = "upload proper scan copy of both pages"
+            });
+            return Ok(pasportList);
         }
 
+
         // POST: api/Passport
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post(Passport value)
         {
+            pasportList.Add(value);
+            value.ID = pasportList.Count;
+            return Ok(value);
         }
 
         // PUT: api/Passport/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, Passport value)
         {
+            Passport result = pasportList.Where(p => p.ID == id).FirstOrDefault();
+            result.PassportNumber = value.PassportNumber;
+            result.Status = value.Status;
+            result.Comments = value.Comments;
+            return Ok(result);
         }
 
         // DELETE: api/Passport/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
+            Passport result = pasportList.Where(p => p.ID == id).FirstOrDefault();
+            var resultflag = pasportList.Remove(result);
+            return Ok(resultflag);
         }
     }
 }

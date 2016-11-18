@@ -10,10 +10,16 @@ namespace Espl.Linkup.Web.Controllers.Profile
 {
     public class UANController : ApiController
     {
+        static List<UAN> UANlist = new List<UAN>();
         // GET: api/UAN/5
-        public IHttpActionResult Get(int id)
+
+
+
+
+        public IHttpActionResult Get()
         {
-            return Ok(new UAN
+
+            UANlist.Add(new UAN
             {
                 ID = 1,
                 UANNumber = "123456",
@@ -21,16 +27,41 @@ namespace Espl.Linkup.Web.Controllers.Profile
                 Status = "Approved",
                 Comments = "Done"
             });
+            UANlist.Add(new UAN
+            {
+                ID = 2,
+                UANNumber = "123456",
+                FromESPL = true,
+                Status = "Approved",
+                Comments = "Done"
+            });
+            return Ok(UANlist);
+        }
+
+
+        public IHttpActionResult Get(int id)
+        {
+            var result = UANlist.Where(p => p.ID == id).FirstOrDefault();
+            return Ok(result);
         }
 
         // POST: api/UAN
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post(UAN value)
         {
+            UANlist.Add(value);
+            value.ID = UANlist.Count;
+            return Ok(value);
         }
 
         // PUT: api/UAN/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, UAN value)
         {
+            UAN result = UANlist.Where(p => p.ID == id).FirstOrDefault();
+            result.UANNumber = value.UANNumber;
+            result.Status = value.Status;
+            result.FromESPL = value.FromESPL;
+            result.Comments = value.Comments;
+            return Ok(result);
         }
 
         // DELETE: api/UAN/5
