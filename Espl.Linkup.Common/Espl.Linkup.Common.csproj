@@ -42,8 +42,14 @@
     <Compile Include="Core\IBaseEntity.cs" />
     <Compile Include="Core\IBaseSearch.cs" />
     <Compile Include="Core\IBaseSearchResult.cs" />
+    <Compile Include="Corporate\Conference\IConference.cs" />
+    <Compile Include="Corporate\Conference\IConferenceSearch.cs" />
+    <Compile Include="Corporate\Room\IRoom.cs" />
+    <Compile Include="Corporate\Room\IRoomSearch.cs" />
     <Compile Include="Corporate\Ticket\ITicket.cs" />
     <Compile Include="Corporate\Ticket\ITicketSearch.cs" />
+    <Compile Include="Corporate\Treatment\ITreatment.cs" />
+    <Compile Include="Corporate\Treatment\ITreatmentSearch.cs" />
     <Compile Include="Leave\Holiday\IHolidaySearch.cs" />
     <Compile Include="Leave\Holiday\IHoliday.cs" />
     <Compile Include="Leave\ILeave.cs" />

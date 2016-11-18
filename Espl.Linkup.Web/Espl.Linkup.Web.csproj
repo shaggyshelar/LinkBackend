@@ -121,7 +121,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Corporate\ConferenceController.cs" />
     <Compile Include="Controllers\Corporate\LogTicketController.cs" />
+    <Compile Include="Controllers\Corporate\RoomController.cs" />
+    <Compile Include="Controllers\Corporate\TreatmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Leave\HolidayController.cs" />
     <Compile Include="Controllers\Leave\LeaveController.cs" />

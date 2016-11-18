@@ -20,7 +20,7 @@ namespace Espl.Linkup.Web.Controllers.Timesheets
             timesheetList.Add(new Timesheet
             {
                 project = new Project { ID = 1, ProjectName = "First" },
-                task = new Task { ID = 1, TaskName = "Development" },
+                task = new Task { ID = 1, project = new Project { ID = 1 }, TaskName = "Development" },
                 timesheetGroupID = 1,
                 monday_b_note = "This is sample task for project",
                 tuesday_b_note = "This is sample task for project",
@@ -50,20 +50,20 @@ namespace Espl.Linkup.Web.Controllers.Timesheets
                 friday_nb_time = new TimeSpan(2, 18, 00),
                 saturday_nb_time = new TimeSpan(2, 19, 00),
                 sunday_nb_time = new TimeSpan(2, 20, 00),
-                monday_dt = new DateTime(11, 14, 2016),
-                tuesday_dt = new DateTime(11, 15, 2016),
-                wednesday_dt = new DateTime(11, 16, 2016),
-                thursday_dt = new DateTime(11, 17, 2016),
-                friday_dt = new DateTime(11, 18, 2016),
-                saturday_dt = new DateTime(11, 19, 2016),
-                sunday_dt = new DateTime(11, 20, 2016),
+                monday_dt = new DateTime(2016, 11, 14),
+                tuesday_dt = new DateTime(2016, 11, 15),
+                wednesday_dt = new DateTime(2016, 11, 16),
+                thursday_dt = new DateTime(2016, 11, 17),
+                friday_dt = new DateTime(2016, 11, 18),
+                saturday_dt = new DateTime(2016, 11, 19),
+                sunday_dt = new DateTime(2016, 11, 20),
                 status = false,
                 ID = 1
             });
             timesheetList.Add(new Timesheet
             {
                 project = new Project { ID = 2, ProjectName = "Second" },
-                task = new Task { ID = 1, TaskName = "Development" },
+                task = new Task { ID = 1, project = new Project { ID = 1 }, TaskName = "Development" },
                 timesheetGroupID = 1,
                 monday_b_note = "This is sample task for project",
                 tuesday_b_note = "This is sample task for project",
@@ -93,13 +93,13 @@ namespace Espl.Linkup.Web.Controllers.Timesheets
                 friday_nb_time = new TimeSpan(2, 18, 00),
                 saturday_nb_time = new TimeSpan(2, 19, 00),
                 sunday_nb_time = new TimeSpan(2, 20, 00),
-                monday_dt = new DateTime(11, 14, 2016),
-                tuesday_dt = new DateTime(11, 15, 2016),
-                wednesday_dt = new DateTime(11, 16, 2016),
-                thursday_dt = new DateTime(11, 17, 2016),
-                friday_dt = new DateTime(11, 18, 2016),
-                saturday_dt = new DateTime(11, 19, 2016),
-                sunday_dt = new DateTime(11, 20, 2016),
+                monday_dt = new DateTime(2016, 11, 14),
+                tuesday_dt = new DateTime(2016, 11, 15),
+                wednesday_dt = new DateTime(2016, 11, 16),
+                thursday_dt = new DateTime(2016, 11, 17),
+                friday_dt = new DateTime(2016, 11, 18),
+                saturday_dt = new DateTime(2016, 11, 19),
+                sunday_dt = new DateTime(2016, 11, 20),
                 status = false,
                 ID = 2
             });

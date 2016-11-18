@@ -43,6 +43,12 @@
     <Compile Include="Core\BaseSearch.cs" />
     <Compile Include="Core\BaseSearchResult.cs" />
     <Compile Include="Core\IBaseDao.cs" />
+    <Compile Include="Corporate\Conference\Conference.cs" />
+    <Compile Include="Corporate\Conference\ConferenceSearch.cs" />
+    <Compile Include="Corporate\Room\Room.cs" />
+    <Compile Include="Corporate\Room\RoomSearch.cs" />
+    <Compile Include="Corporate\Treatment\Treatment.cs" />
+    <Compile Include="Corporate\Treatment\TreatmentSearch.cs" />
     <Compile Include="Project\Task\Task.cs" />
     <Compile Include="Project\Task\TaskSearch.cs" />
     <Compile Include="Project\Project.cs" />
