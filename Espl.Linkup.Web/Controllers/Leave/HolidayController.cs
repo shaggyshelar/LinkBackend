@@ -48,7 +48,7 @@ namespace Espl.Linkup.Web.Controllers.Leave.Holidays
         {
             holidayList.Add(value);
             value.ID = holidayList.Count;
-            return Ok(true);
+            return Ok(value);
         }
 
         // PUT: api/Holiday/5

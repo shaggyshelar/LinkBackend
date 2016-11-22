@@ -13,9 +13,6 @@ namespace Espl.Linkup.Web.Controllers.Profile
         static List<UAN> UANlist = new List<UAN>();
         // GET: api/UAN/5
 
-
-
-
         public IHttpActionResult Get()
         {
 

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Espl.Linkup.Domain.Leave.LeaveDetail
+namespace Espl.Linkup.Domain.Leaves.LeaveDetail
 {
 
     public class LeaveDetail : BaseEntity<ILeaveDetail, ILeaveDetailSearch>,ILeaveDetail

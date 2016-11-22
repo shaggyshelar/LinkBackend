@@ -26,8 +26,8 @@ namespace Espl.Linkup.Web.Controllers.Leaves
                 Reason = "Sample",
                 Status = "Approved",
                 Employee = emp,
-                StartDate = new DateTime(12, 12, 2016),
-                EndDate = new DateTime(12, 18, 2016)
+                StartDate = new DateTime(2016, 12, 12),
+                EndDate = new DateTime(2016,12,18)
 
             });
             leaveList.Add(new Espl.Linkup.Domain.Leaves.Leave
@@ -37,8 +37,8 @@ namespace Espl.Linkup.Web.Controllers.Leaves
                 Reason = "Sample Demo",
                 Status = "Approved",
                 Employee = emp,
-                StartDate = new DateTime(11, 12, 2016),
-                EndDate = new DateTime(11, 18, 2016)
+                StartDate = new DateTime(2016,11, 12),
+                EndDate = new DateTime(2016,11,18)
             });
             return Ok(leaveList);
         }
@@ -55,7 +55,7 @@ namespace Espl.Linkup.Web.Controllers.Leaves
         {
             leaveList.Add(value);
             value.ID = leaveList.Count;
-            return Ok(true);
+            return Ok(value);
         }
 
         // PUT: api/Leave/5

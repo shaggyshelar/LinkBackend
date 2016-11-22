@@ -1,5 +1,5 @@
 ﻿using Espl.Linkup.Common.Employee;
-using Espl.Linkup.Domain.Leave.LeaveDetail;
+using Espl.Linkup.Domain.Leaves.LeaveDetail;
 using Espl.Linkup.Domain.Profile.Employee;
 using System;
 using System.Collections.Generic;
@@ -29,8 +29,8 @@ namespace Espl.Linkup.Web.Controllers.Leaves
                 Reason = "Sample",
                 Status = "Approved",
                 Employee = emp,
-                StartDate = new DateTime(12, 12, 2016),
-                EndDate = new DateTime(12, 18, 2016)
+                StartDate = new DateTime( 2016,12, 12),
+                EndDate = new DateTime(2016, 12, 18)
 
             });
             leaveList.Add(new Espl.Linkup.Domain.Leaves.Leave
@@ -40,8 +40,8 @@ namespace Espl.Linkup.Web.Controllers.Leaves
                 Reason = "Sample Demo",
                 Status = "Approved",
                 Employee = emp,
-                StartDate = new DateTime(11, 12, 2016),
-                EndDate = new DateTime(11, 18, 2016)
+                StartDate = new DateTime( 2016,11, 12),
+                EndDate = new DateTime( 2016,11, 18)
             });
 
             leaveDetailList.Add(
