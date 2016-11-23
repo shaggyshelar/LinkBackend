@@ -18,7 +18,7 @@ namespace Espl.Linkup.Domain.Profile.Achievement
             throw new NotImplementedException();
         }
 
-        public string AchievementName { get; set; }
+        public string Name { get; set; }
         public string Status { get; set; }
         public string Comments { get; set; }
     }

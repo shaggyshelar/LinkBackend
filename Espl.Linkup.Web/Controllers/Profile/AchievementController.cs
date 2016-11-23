@@ -18,7 +18,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
 
             achievementList.Add(new Achievement
             {
-                AchievementName = "Spot Award",
+                Name = "Spot Award",
                 Comments = "Good Work",
                 ID = 1
             });
@@ -46,7 +46,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
         {
             Achievement result = achievementList.Where(p => p.ID == id).FirstOrDefault();
             result.ID = id;
-            result.AchievementName = value.AchievementName;
+            result.Name = value.Name;
             result.Comments = value.Comments;
             return Ok(result);
         }

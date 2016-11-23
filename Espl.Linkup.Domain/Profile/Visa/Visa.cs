@@ -1,4 +1,5 @@
-﻿using Espl.Linkup.Common.Visa;
+﻿using Espl.Linkup.Common.Countries;
+using Espl.Linkup.Common.Visa;
 using Espl.Linkup.Domain.Core;
 using System;
 using System.Collections.Generic;
@@ -20,9 +21,10 @@ namespace Espl.Linkup.Domain.Profile.Visa
 
         public string Status { get; set; }
         public string Comments { get; set; }
-        public string VisaNumber { get; set; }
+        public string Number { get; set; }
         public DateTime ExpDate { get; set; }
-        public string VisaType { get; set; }
-        public string VisaFilePath { get; set; }
+        public string Type { get; set; }
+        public ICountry Country { get; set; }
+        public string FilePath { get; set; }
     }
 }

@@ -20,8 +20,8 @@ namespace Espl.Linkup.Domain.Profile.UAN
 
         public string Status { get; set; }
         public string Comments { get; set; }
-        public string UANNumber { get; set; }
+        public string Number { get; set; }
         public bool FromESPL { get; set; }
-        public string UANFilePath { get; set; }
+        public string FilePath { get; set; }
     }
 }

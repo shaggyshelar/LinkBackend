@@ -12,7 +12,9 @@ namespace Espl.Linkup.Common.Corporate.Rooms
     {
         #region Properties
         //
-        string roomName { get; set; }
+        string Name { get; set; }
+        string Color { get; set; }
+
         #endregion Properties
     }
 }

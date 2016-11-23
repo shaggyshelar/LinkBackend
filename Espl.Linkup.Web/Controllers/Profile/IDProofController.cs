@@ -1,4 +1,5 @@
-﻿using Espl.Linkup.Domain.Profile.IDProof;
+﻿using Espl.Linkup.Domain.IDProofTypes;
+using Espl.Linkup.Domain.Profile.IDProof;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,8 @@ namespace Espl.Linkup.Web.Controllers.Profile
                 new IDProof
                 {
                     ID = 1,
-                    IDProofType = "Adhar Card",
-                    IDProofFilePath = "abc.pdf",
+                    Type = new IDProofType { ID=1,Name="PAN Card" },
+                    FilePath = "abc.pdf",
                     Value = "123123123",
                     Status = "Approved",
                     Comments = "Approved",
@@ -50,7 +51,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
         public IHttpActionResult Put(int id, IDProof value)
         {
             IDProof result = IDProofList.Where(p => p.ID == id).FirstOrDefault();
-            result.IDProofType = value.IDProofType;
+            result.Type = value.Type;
             result.Value = value.Value;
             result.Status = value.Status;
             result.Comments = value.Comments;

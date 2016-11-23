@@ -20,7 +20,7 @@ namespace Espl.Linkup.Domain.Corporate.Rooms
         }
 
 
-
-        public string roomName { get; set; }
+        public string Color { get; set; }
+        public string Name { get; set; }
     }
 }

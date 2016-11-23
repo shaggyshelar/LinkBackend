@@ -1,4 +1,5 @@
 ﻿using Espl.Linkup.Common.Core;
+using Espl.Linkup.Common.Departments;
 using Espl.Linkup.Common.Employee;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,9 @@ namespace Espl.Linkup.Common.Corporate.Ticket
     {
         #region Properties
         //
-        string Department { get; set; }
+        IDepartment Department { get; set; }
         DateTime HolidayDate { get; set; }
-        string Priority { get; set; }
+        Enum Priority { get; set; }
         string Concern { get; set; }
         string Description { get; set; }
         IEmployee ResolvedBy { get; set; }

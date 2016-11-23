@@ -25,16 +25,16 @@ namespace Espl.Linkup.Web.Controllers.Profile
             pasportList.Add(new Passport
             {
                 ID = 1,
-                PassportNumber = "123456",
-                ExpDate = new DateTime(12, 12, 2020),
+                Number = "123456",
+                ExpDate = new DateTime( 2020,12, 12),
                 Status = "Approved",
                 Comments = "upload proper scan copy of both pages"
             });
             pasportList.Add(new Passport
             {
                 ID = 2,
-                PassportNumber = "123456",
-                ExpDate = new DateTime(12, 12, 2020),
+                Number = "123456",
+                ExpDate = new DateTime( 2020,12, 12),
                 Status = "Approved",
                 Comments = "upload proper scan copy of both pages"
             });
@@ -54,7 +54,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
         public IHttpActionResult Put(int id, Passport value)
         {
             Passport result = pasportList.Where(p => p.ID == id).FirstOrDefault();
-            result.PassportNumber = value.PassportNumber;
+            result.Number = value.Number;
             result.Status = value.Status;
             result.Comments = value.Comments;
             return Ok(result);

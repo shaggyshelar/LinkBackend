@@ -15,6 +15,8 @@ namespace Espl.Linkup.Common.Address
         string CurrentAddFilePath { get; set; }
         string PermanantAdd { get; set; }
         string PermanantAddFilePath { get; set; }
+        string Status { get; set; }
+        string Comments { get; set; }
 
         #endregion Properties
     }

@@ -18,12 +18,12 @@ namespace Espl.Linkup.Web.Controllers.Corporate.Rooms
 
             roomList.Add(new Room
             {
-                roomName = "First",
+                Name = "First",
                 ID = 1
             });
             roomList.Add(new Room
             {
-                roomName = "Second",
+                Name = "Second",
                 ID = 2
             });
 
@@ -41,7 +41,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate.Rooms
         public IHttpActionResult Post(Room value)
         {
             Room result = new Room();
-            result.roomName = value.roomName;
+            result.Name = value.Name;
             roomList.Add(result);
             result.ID = roomList.Count;
             return Ok(result.ID);
@@ -51,7 +51,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate.Rooms
         public IHttpActionResult Put(int id, Room value)
         {
             Room result = roomList.Where(p => p.ID == id).FirstOrDefault();
-            result.roomName = value.roomName;
+            result.Name = value.Name;
             return Ok(result);
         }
 

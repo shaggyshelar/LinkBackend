@@ -1,4 +1,5 @@
 ﻿using Espl.Linkup.Common.Core;
+using Espl.Linkup.Common.Employee;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace Espl.Linkup.Domain.Core
 {
     public abstract class BaseEntity<IEntity, IEntitySearch>
-        where IEntity : IBaseEntity<IEntity,IEntitySearch>
+        where IEntity : IBaseEntity<IEntity, IEntitySearch>
     {
         public long ID { get; set; }
         public long? CreatedBy { get; set; }
@@ -16,8 +17,7 @@ namespace Espl.Linkup.Domain.Core
         public long? UpdatedBy { get; set; }
         public DateTime? UpdatedOn { get; set; }
         public bool DeleteFlag { get; set; }
-
-
+        public IEmployee employee { get; set; }
 
         public IBaseSearchResult<IEntity> Search(IEntitySearch branch)
         {

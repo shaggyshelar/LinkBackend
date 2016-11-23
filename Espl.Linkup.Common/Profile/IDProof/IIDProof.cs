@@ -1,4 +1,5 @@
 ﻿using Espl.Linkup.Common.Core;
+using Espl.Linkup.Common.IDProofTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,12 @@ namespace Espl.Linkup.Common.IDProof
     {
         #region Properties
         //
-    
-        string IDProofType { get; set; }
+
+        IIDProofType Type { get; set; }
         string Value { get; set; }
         string Status { get; set; }
         string Comments { get; set; }
-        string IDProofFilePath { get; set; }
+        string FilePath { get; set; }
 
         #endregion Properties
     }

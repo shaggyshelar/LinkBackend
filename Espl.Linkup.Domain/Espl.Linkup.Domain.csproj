@@ -39,6 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Role\Role.cs" />
+    <Compile Include="Admin\Role\RoleSearch.cs" />
+    <Compile Include="Admin\State\State.cs" />
+    <Compile Include="Admin\State\StateSearch.cs" />
+    <Compile Include="Admin\Country\Country.cs" />
+    <Compile Include="Admin\Country\CountrySearch.cs" />
     <Compile Include="Core\BaseEntity.cs" />
     <Compile Include="Core\BaseSearch.cs" />
     <Compile Include="Core\BaseSearchResult.cs" />
@@ -49,6 +55,23 @@
     <Compile Include="Corporate\Room\RoomSearch.cs" />
     <Compile Include="Corporate\Treatment\Treatment.cs" />
     <Compile Include="Corporate\Treatment\TreatmentSearch.cs" />
+    <Compile Include="Enum\Enum.cs" />
+    <Compile Include="Master\Client\Client.cs" />
+    <Compile Include="Master\Client\ClientSearch.cs" />
+    <Compile Include="Master\Class\Class.cs" />
+    <Compile Include="Master\Class\ClassSearch.cs" />
+    <Compile Include="Master\SkillType\SkillType.cs" />
+    <Compile Include="Master\SkillType\SkillTypeSearch.cs" />
+    <Compile Include="Master\Department\Department.cs" />
+    <Compile Include="Master\Department\DepartmentSearch.cs" />
+    <Compile Include="Master\ContactType\ContactType.cs" />
+    <Compile Include="Master\ContactType\ContactTypeSearch.cs" />
+    <Compile Include="Master\IDProofType\IDProofType.cs" />
+    <Compile Include="Master\IDProofType\IDProofTypeSearch.cs" />
+    <Compile Include="Master\PF\PF.cs" />
+    <Compile Include="Master\PF\PFSearch.cs" />
+    <Compile Include="Profile\Contact\Contact.cs" />
+    <Compile Include="Profile\Contact\ContactSearch.cs" />
     <Compile Include="Project\Task\Task.cs" />
     <Compile Include="Project\Task\TaskSearch.cs" />
     <Compile Include="Project\Project.cs" />

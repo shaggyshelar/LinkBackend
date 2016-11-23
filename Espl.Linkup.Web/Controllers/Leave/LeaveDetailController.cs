@@ -25,7 +25,7 @@ namespace Espl.Linkup.Web.Controllers.Leaves
             leaveList.Add(new Espl.Linkup.Domain.Leaves.Leave
             {
                 ID = 1,
-                NumberOFLeave = 12,
+                NumberOfLeave = 12,
                 Reason = "Sample",
                 Status = "Approved",
                 Employee = emp,
@@ -36,7 +36,7 @@ namespace Espl.Linkup.Web.Controllers.Leaves
             leaveList.Add(new Espl.Linkup.Domain.Leaves.Leave
             {
                 ID = 2,
-                NumberOFLeave = 12,
+                NumberOfLeave = 12,
                 Reason = "Sample Demo",
                 Status = "Approved",
                 Employee = emp,

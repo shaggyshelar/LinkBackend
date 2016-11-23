@@ -1,5 +1,8 @@
-﻿using Espl.Linkup.Common.Skill;
+﻿using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.Skill;
+using Espl.Linkup.Common.SkillTypes;
 using Espl.Linkup.Domain.Core;
+using Espl.Linkup.Domain.SkillTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +21,9 @@ namespace Espl.Linkup.Domain.Profile.Skill
             throw new NotImplementedException();
         }
 
-        public string Skills { get; set; }
-        public string SkillType { get; set; }
-        public IList<string> Approvers { get; set; }
+        public string Description { get; set; }
+        public ISkillType Type { get; set; }
+        public IList<IEmployee> Approvers { get; set; }
         public string Status { get; set; }
         public string Comments { get; set; }
     }

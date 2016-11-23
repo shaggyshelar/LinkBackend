@@ -18,11 +18,12 @@ namespace Espl.Linkup.Domain.Profile.Passport
             throw new NotImplementedException();
         }
 
-        public string PassportNumber { get; set; }
+        public string Number { get; set; }
         public DateTime ExpDate { get; set; }
-        public string PassportType { get;set; }
+        public DateTime IssueDate { get; set; }
+        public string Type { get;set; }
         public string Status { get; set; }
         public string Comments { get; set; }
-        public string PassportFilePath { get; set; }
+        public string FilePath { get; set; }
     }
 }

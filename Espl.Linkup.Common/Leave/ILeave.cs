@@ -15,9 +15,10 @@ namespace Espl.Linkup.Common.Leaves
         IEmployee Employee { get; set; }
         DateTime StartDate { get; set; }
         DateTime EndDate { get; set; }
-        Int64 NumberOFLeave { get; set; }
+        Int64 NumberOfLeave { get; set; }
         string Status { get; set; }
         string Reason { get; set; }
+
         #endregion Properties
     }
 }

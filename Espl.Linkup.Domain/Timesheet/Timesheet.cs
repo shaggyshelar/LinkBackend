@@ -10,7 +10,7 @@ using System.Text;
 namespace Espl.Linkup.Domain.Timesheets
 {
 
-    public class Timesheet : BaseEntity<ITimesheet, ITimesheetSearch>,ITimesheet
+    public class Timesheet : BaseEntity<ITimesheet, ITimesheetSearch>, ITimesheet
     {
 
         protected override IBaseDao<ITimesheet, ITimesheetSearch> GetDAO()
@@ -19,44 +19,47 @@ namespace Espl.Linkup.Domain.Timesheets
             throw new NotImplementedException();
         }
 
-        public IProject project { get; set; }
-        public ITask task { get; set; }
-        public long timesheetGroupID { get; set; }
-        public string monday_b_note { get; set; }
-        public string tuesday_b_note { get; set; }
-        public string wednesday_b_note { get; set; }
-        public string thursday_b_note { get; set; }
-        public string friday_b_note { get; set; }
-        public string saturday_b_note { get; set; }
-        public string sunday_b_note { get; set; }
-        public TimeSpan monday_b_time { get; set; }
-        public TimeSpan tuesday_b_time { get; set; }
-        public TimeSpan wednesday_b_time { get; set; }
-        public TimeSpan thursday_b_time { get; set; }
-        public TimeSpan friday_b_time { get; set; }
-        public TimeSpan saturday_b_time { get; set; }
-        public TimeSpan sunday_b_time { get; set; }
-        public string monday_nb_note { get; set; }
-        public string tuesday_nb_note { get; set; }
-        public string wednesday_nb_note { get; set; }
-        public string thursday_nb_note { get; set; }
-        public string friday_nb_note { get; set; }
-        public string saturday_nb_note { get; set; }
-        public string sunday_nb_note { get; set; }
-        public TimeSpan monday_nb_time { get; set; }
-        public TimeSpan tuesday_nb_time { get; set; }
-        public TimeSpan wednesday_nb_time { get; set; }
-        public TimeSpan thursday_nb_time { get; set; }
-        public TimeSpan friday_nb_time { get; set; }
-        public TimeSpan saturday_nb_time { get; set; }
-        public TimeSpan sunday_nb_time { get; set; }
-        public DateTime monday_dt { get; set; }
-        public DateTime tuesday_dt { get; set; }
-        public DateTime wednesday_dt { get; set; }
-        public DateTime thursday_dt { get; set; }
-        public DateTime friday_dt { get; set; }
-        public DateTime saturday_dt { get; set; }
-        public DateTime sunday_dt { get; set; }
-        public bool status { get; set; }
+
+
+        public IProject Project { get; set; }
+
+        public ITask Task { get; set; }
+        public long TimesheetGroupID { get; set; }
+        public string MondayBNote { get; set; }
+        public string TuesdayBNote { get; set; }
+        public string WednesdayBNote { get; set; }
+        public string ThursdayBNote { get; set; }
+        public string FridayBNote { get; set; }
+        public string SaturdayBNote { get; set; }
+        public string SundayBNote { get; set; }
+        public TimeSpan MondayBTime { get; set; }
+        public TimeSpan TuesdayBTime { get; set; }
+        public TimeSpan WednesdayBTime { get; set; }
+        public TimeSpan ThursdayBTime { get; set; }
+        public TimeSpan FridayBTime { get; set; }
+        public TimeSpan SaturdayBTime { get; set; }
+        public TimeSpan SundayBTime { get; set; }
+        public string MondayNBNote { get; set; }
+        public string TuesdayNBNote { get; set; }
+        public string WednesdayNBNote { get; set; }
+        public string ThursdayNBNote { get; set; }
+        public string FridayNBNote { get; set; }
+        public string SaturdayNBNote { get; set; }
+        public string SundayNBNote { get; set; }
+        public TimeSpan MondayNBTime { get; set; }
+        public TimeSpan TuesdayNBTime { get; set; }
+        public TimeSpan WednesdayNBTime { get; set; }
+        public TimeSpan ThursdayNBTime { get; set; }
+        public TimeSpan FridayNBTime { get; set; }
+        public TimeSpan SaturdayNBTime { get; set; }
+        public TimeSpan SundayNBTime { get; set; }
+        public DateTime MondayDate { get; set; }
+        public DateTime TuesdayDate { get; set; }
+        public DateTime WednesdayDate { get; set; }
+        public DateTime ThursdayDate { get; set; }
+        public DateTime FridayDate { get; set; }
+        public DateTime SaturdayDate { get; set; }
+        public DateTime SundayDate { get; set; }
+        public bool Status { get; set; }
     }
 }

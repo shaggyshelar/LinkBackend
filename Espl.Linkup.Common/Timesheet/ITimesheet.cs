@@ -14,50 +14,50 @@ namespace Espl.Linkup.Common.Timesheets
     {
         #region Properties
         //
-        IProject project { get; set; }
-        ITask task { get; set; }
-        Int64 timesheetGroupID { get; set; }
-        string monday_b_note { get; set; }
-        string tuesday_b_note { get; set; }
-        string wednesday_b_note { get; set; }
-        string thursday_b_note { get; set; }
-        string friday_b_note { get; set; }
-        string saturday_b_note { get; set; }
-        string sunday_b_note { get; set; }
+        IProject Project { get; set; }
+        ITask Task { get; set; }
+        Int64 TimesheetGroupID { get; set; }
+        string MondayBNote { get; set; }
+        string TuesdayBNote { get; set; }
+        string WednesdayBNote { get; set; }
+        string ThursdayBNote { get; set; }
+        string FridayBNote { get; set; }
+        string SaturdayBNote { get; set; }
+        string SundayBNote { get; set; }
 
-        TimeSpan monday_b_time { get; set; }
-        TimeSpan tuesday_b_time { get; set; }
-        TimeSpan wednesday_b_time { get; set; }
-        TimeSpan thursday_b_time { get; set; }
-        TimeSpan friday_b_time { get; set; }
-        TimeSpan saturday_b_time { get; set; }
-        TimeSpan sunday_b_time { get; set; }
+        TimeSpan MondayBTime { get; set; }
+        TimeSpan TuesdayBTime { get; set; }
+        TimeSpan WednesdayBTime { get; set; }
+        TimeSpan ThursdayBTime { get; set; }
+        TimeSpan FridayBTime { get; set; }
+        TimeSpan SaturdayBTime { get; set; }
+        TimeSpan SundayBTime { get; set; }
 
-        string monday_nb_note { get; set; }
-        string tuesday_nb_note { get; set; }
-        string wednesday_nb_note { get; set; }
-        string thursday_nb_note { get; set; }
-        string friday_nb_note { get; set; }
-        string saturday_nb_note { get; set; }
-        string sunday_nb_note { get; set; }
+        string MondayNBNote { get; set; }
+        string TuesdayNBNote { get; set; }
+        string WednesdayNBNote { get; set; }
+        string ThursdayNBNote { get; set; }
+        string FridayNBNote { get; set; }
+        string SaturdayNBNote { get; set; }
+        string SundayNBNote { get; set; }
 
-        TimeSpan monday_nb_time { get; set; }
-        TimeSpan tuesday_nb_time { get; set; }
-        TimeSpan wednesday_nb_time { get; set; }
-        TimeSpan thursday_nb_time { get; set; }
-        TimeSpan friday_nb_time { get; set; }
-        TimeSpan saturday_nb_time { get; set; }
-        TimeSpan sunday_nb_time { get; set; }
+        TimeSpan MondayNBTime { get; set; }
+        TimeSpan TuesdayNBTime { get; set; }
+        TimeSpan WednesdayNBTime { get; set; }
+        TimeSpan ThursdayNBTime { get; set; }
+        TimeSpan FridayNBTime { get; set; }
+        TimeSpan SaturdayNBTime { get; set; }
+        TimeSpan SundayNBTime { get; set; }
 
-        DateTime monday_dt { get; set; }
-        DateTime tuesday_dt { get; set; }
-        DateTime wednesday_dt { get; set; }
-        DateTime thursday_dt { get; set; }
-        DateTime friday_dt { get; set; }
-        DateTime saturday_dt { get; set; }
-        DateTime sunday_dt { get; set; }
+        DateTime MondayDate { get; set; }
+        DateTime TuesdayDate { get; set; }
+        DateTime WednesdayDate { get; set; }
+        DateTime ThursdayDate { get; set; }
+        DateTime FridayDate { get; set; }
+        DateTime SaturdayDate { get; set; }
+        DateTime SundayDate { get; set; }
 
-        bool status { get; set; }
+        bool Status { get; set; }
 
         #endregion Properties
     }

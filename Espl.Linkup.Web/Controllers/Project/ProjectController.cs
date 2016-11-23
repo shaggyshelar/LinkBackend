@@ -18,14 +18,14 @@ namespace Espl.Linkup.Web.Controllers.Projects
 
             projectList.Add(new Project
             {
-                ProjectName = "First",
-                ProjectManager = new Employee { ID = 1, Name = "Amol 1" },
+                Name = "First",
+                Manager = new Employee { ID = 1, Name = "Amol 1" },
                 ID = 1
             });
             projectList.Add(new Project
             {
-                ProjectName = "Second",
-                ProjectManager = new Employee { ID = 1, Name = "Amol 2" },
+                Name = "Second",
+                Manager = new Employee { ID = 1, Name = "Amol 2" },
                 ID = 1
             });
 
@@ -43,8 +43,8 @@ namespace Espl.Linkup.Web.Controllers.Projects
         public IHttpActionResult Post(Project value)
         {
             Project result = new Project();
-            result.ProjectName = value.ProjectName;
-            result.ProjectManager = value.ProjectManager;
+            result.Name = value.Name;
+            result.Manager = value.Manager;
             projectList.Add(result);
             result.ID = projectList.Count;
             return Ok(result.ID);
@@ -54,8 +54,8 @@ namespace Espl.Linkup.Web.Controllers.Projects
         public IHttpActionResult Put(int id, Project value)
         {
             Project result = projectList.Where(p => p.ID == id).FirstOrDefault();
-            result.ProjectName = value.ProjectName;
-            result.ProjectManager = value.ProjectManager;
+            result.Name = value.Name;
+            result.Manager = value.Manager;
             return Ok(result);
         }
 

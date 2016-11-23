@@ -1,4 +1,5 @@
 ﻿using Espl.Linkup.Common.IDProof;
+using Espl.Linkup.Common.IDProofTypes;
 using Espl.Linkup.Domain.Core;
 using System;
 using System.Collections.Generic;
@@ -20,10 +21,10 @@ namespace Espl.Linkup.Domain.Profile.IDProof
 
 
 
-        public string IDProofType { get; set; }
+        public IIDProofType Type { get; set; }
         public string Value { get; set; }
         public string Status { get; set; }
         public string Comments { get; set; }
-        public string IDProofFilePath { get; set; }
+        public string FilePath { get; set; }
     }
 }

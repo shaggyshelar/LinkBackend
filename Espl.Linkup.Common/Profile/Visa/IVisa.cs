@@ -1,4 +1,5 @@
 ﻿using Espl.Linkup.Common.Core;
+using Espl.Linkup.Common.Countries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,13 @@ namespace Espl.Linkup.Common.Visa
     {
         #region Properties
         //
-        string VisaNumber { get; set; }
+        string Number { get; set; }
         DateTime ExpDate { get; set; }
-        string VisaType { get; set; }
+        string Type { get; set; }
         string Status { get; set; }
         string Comments { get; set; }
-        string VisaFilePath { get; set; }
+        string FilePath { get; set; }
+        ICountry Country { get; set; }
 
         #endregion Properties
     }

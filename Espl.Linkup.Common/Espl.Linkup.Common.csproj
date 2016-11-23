@@ -39,6 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Country\ICountry.cs" />
+    <Compile Include="Admin\Country\ICountrySearch.cs" />
+    <Compile Include="Admin\Role\IRole.cs" />
+    <Compile Include="Admin\Role\IRoleSearch.cs" />
+    <Compile Include="Admin\State\IState.cs" />
+    <Compile Include="Admin\State\IStateSearch.cs" />
     <Compile Include="Core\IBaseEntity.cs" />
     <Compile Include="Core\IBaseSearch.cs" />
     <Compile Include="Core\IBaseSearchResult.cs" />
@@ -56,8 +62,24 @@
     <Compile Include="Leave\ILeaveSearch.cs" />
     <Compile Include="Leave\LeaveDetail\ILeaveDetail.cs" />
     <Compile Include="Leave\LeaveDetail\ILeaveDetailSearch.cs" />
+    <Compile Include="Master\Class\IClass.cs" />
+    <Compile Include="Master\Class\IClassSearch.cs" />
+    <Compile Include="Master\SkillType\ISkillType.cs" />
+    <Compile Include="Master\SkillType\ISkillTypeSearch.cs" />
+    <Compile Include="Master\IDProofType\IIDProofType.cs" />
+    <Compile Include="Master\IDProofType\IIDProofTypeSearch.cs" />
+    <Compile Include="Master\ContactType\IContactType.cs" />
+    <Compile Include="Master\ContactType\IContactTypeSearch.cs" />
+    <Compile Include="Master\Client\IClient.cs" />
+    <Compile Include="Master\Client\IClientSearch.cs" />
+    <Compile Include="Master\PF\IPF.cs" />
+    <Compile Include="Master\PF\IPFSearch.cs" />
+    <Compile Include="Master\Department\IDepartment.cs" />
+    <Compile Include="Master\Department\IDepartmentSearch.cs" />
     <Compile Include="Profile\Address\IAddress.cs" />
     <Compile Include="Profile\Address\IAddressSearch.cs" />
+    <Compile Include="Profile\Contact\IContact.cs" />
+    <Compile Include="Profile\Contact\IContactSearch.cs" />
     <Compile Include="Profile\Employee\IEmployee.cs" />
     <Compile Include="Profile\Employee\IEmployeeSearch.cs" />
     <Compile Include="Profile\Nominee\INominee.cs" />

@@ -12,8 +12,8 @@ namespace Espl.Linkup.Common.Projects
     {
         #region Properties
         //
-        string ProjectName { get; set; }
-        IEmployee ProjectManager { get; set; }
+        string Name { get; set; }
+        IEmployee Manager { get; set; }
         #endregion Properties
     }
 }

@@ -1,4 +1,4 @@
-﻿using Espl.Linkup.Common.Certification;
+﻿using Espl.Linkup.Common.Certifications;
 using Espl.Linkup.Domain.Core;
 using System;
 using System.Collections.Generic;
@@ -18,11 +18,12 @@ namespace Espl.Linkup.Domain.Profile.Certification
             throw new NotImplementedException();
         }
 
-        public string CertificationName { get; set; }
-        public string CertificationCode { get; set; }
+        public string Name { get; set; }
+        public string Code { get; set; }
         public bool FromESPL { get; set; }
-        public DateTime CertificationDate { get; set; }
-        public string CertificationDoc { get; set; }
+        public DateTime Date { get; set; }
+        public DateTime ExpiryDate { get; set; }
+        public string FilePath { get; set; }
         public string Status { get; set; }
         public string Comments { get; set; }
     }

@@ -1,4 +1,5 @@
-﻿using Espl.Linkup.Domain.Profile.Education;
+﻿using Espl.Linkup.Domain.Classes;
+using Espl.Linkup.Domain.Profile.Education;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
             educationList.Add(
                 new Education
                 {
-                    Class = "Post-Graduation",
+                    Class = new Class { ID = 1, Name = "Post Graduation" },
                     Degree = "MCA",
                     Grade = "First Class",
                     Percentage = "70%",
@@ -31,7 +32,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
             educationList.Add(
                 new Education
                 {
-                    Class = "Graduation",
+                    Class = new Class { ID = 1, Name = "Graduation" },
                     Degree = "BSC Computer Science",
                     Grade = "First Class",
                     Percentage = "60%",

@@ -11,11 +11,11 @@ namespace Espl.Linkup.Common.UAN
     {
         #region Properties
         //
-        string UANNumber { get; set; }
+        string Number { get; set; }
         bool FromESPL { get; set; }
         string Status { get; set; }
         string Comments { get; set; }
-        string UANFilePath { get; set; }
+        string FilePath { get; set; }
 
         #endregion Properties
     }

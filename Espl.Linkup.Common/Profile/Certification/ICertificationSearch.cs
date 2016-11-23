@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Espl.Linkup.Common.Certification
+namespace Espl.Linkup.Common.Certifications
 {
     public interface ICertificationSearch : IBaseSearch
     {

@@ -1,4 +1,4 @@
-﻿using Espl.Linkup.Common.Certification;
+﻿using Espl.Linkup.Common.Certifications;
 using Espl.Linkup.Domain.Core;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Espl.Linkup.Domain.Profile.Certification
+namespace Espl.Linkup.Domain.Profile.Certifications
 {
 
     public class CertificationSearch : BaseSearch, ICertificationSearch

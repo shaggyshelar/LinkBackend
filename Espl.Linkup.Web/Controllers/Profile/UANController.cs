@@ -19,7 +19,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
             UANlist.Add(new UAN
             {
                 ID = 1,
-                UANNumber = "123456",
+                Number = "123456",
                 FromESPL = true,
                 Status = "Approved",
                 Comments = "Done"
@@ -27,7 +27,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
             UANlist.Add(new UAN
             {
                 ID = 2,
-                UANNumber = "123456",
+                Number = "123456",
                 FromESPL = true,
                 Status = "Approved",
                 Comments = "Done"
@@ -54,7 +54,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
         public IHttpActionResult Put(int id, UAN value)
         {
             UAN result = UANlist.Where(p => p.ID == id).FirstOrDefault();
-            result.UANNumber = value.UANNumber;
+            result.Number = value.Number;
             result.Status = value.Status;
             result.FromESPL = value.FromESPL;
             result.Comments = value.Comments;

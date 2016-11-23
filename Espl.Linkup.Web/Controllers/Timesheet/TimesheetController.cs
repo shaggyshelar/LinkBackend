@@ -19,88 +19,90 @@ namespace Espl.Linkup.Web.Controllers.Timesheets
 
             timesheetList.Add(new Timesheet
             {
-                project = new Project { ID = 1, ProjectName = "First" },
-                task = new Task { ID = 1, project = new Project { ID = 1 }, TaskName = "Development" },
-                timesheetGroupID = 1,
-                monday_b_note = "This is sample task for project",
-                tuesday_b_note = "This is sample task for project",
-                wednesday_b_note = "This is sample task for project",
-                thursday_b_note = "This is sample task for project",
-                friday_b_note = "This is sample task for project",
-                saturday_b_note = "This is sample task for project",
-                sunday_b_note = "This is sample task for project",
-                monday_b_time = new TimeSpan(2, 14, 00),
-                tuesday_b_time = new TimeSpan(2, 14, 00),
-                wednesday_b_time = new TimeSpan(2, 14, 00),
-                thursday_b_time = new TimeSpan(2, 14, 00),
-                friday_b_time = new TimeSpan(2, 14, 00),
-                saturday_b_time = new TimeSpan(2, 14, 00),
-                sunday_b_time = new TimeSpan(2, 14, 00),
-                monday_nb_note = "This is sample task for project",
-                tuesday_nb_note = "This is sample task for project",
-                wednesday_nb_note = "This is sample task for project",
-                thursday_nb_note = "This is sample task for project",
-                friday_nb_note = "This is sample task for project",
-                saturday_nb_note = "This is sample task for project",
-                sunday_nb_note = "This is sample task for project",
-                monday_nb_time = new TimeSpan(2, 14, 00),
-                tuesday_nb_time = new TimeSpan(2, 15, 00),
-                wednesday_nb_time = new TimeSpan(2, 16, 00),
-                thursday_nb_time = new TimeSpan(2, 17, 00),
-                friday_nb_time = new TimeSpan(2, 18, 00),
-                saturday_nb_time = new TimeSpan(2, 19, 00),
-                sunday_nb_time = new TimeSpan(2, 20, 00),
-                monday_dt = new DateTime(2016, 11, 14),
-                tuesday_dt = new DateTime(2016, 11, 15),
-                wednesday_dt = new DateTime(2016, 11, 16),
-                thursday_dt = new DateTime(2016, 11, 17),
-                friday_dt = new DateTime(2016, 11, 18),
-                saturday_dt = new DateTime(2016, 11, 19),
-                sunday_dt = new DateTime(2016, 11, 20),
-                status = false,
+                Project = new Project { ID = 1, Name = "First" },
+                Task = new Task { ID = 1, Project = new Project { ID = 1 }, TaskName = "Development" },
+                TimesheetGroupID = 1,
+                MondayBNote = "This is sample task for project",
+                TuesdayBNote = "This is sample task for project",
+                WednesdayBNote = "This is sample task for project",
+                ThursdayBNote = "This is sample task for project",
+                FridayBNote = "This is sample task for project",
+                SaturdayBNote = "This is sample task for project",
+                SundayBNote = "This is sample task for project",
+                MondayBTime = new TimeSpan(2, 14, 00),
+                TuesdayBTime = new TimeSpan(2, 14, 00),
+                WednesdayBTime = new TimeSpan(2, 14, 00),
+                ThursdayBTime = new TimeSpan(2, 14, 00),
+                FridayBTime = new TimeSpan(2, 14, 00),
+                SaturdayBTime = new TimeSpan(2, 14, 00),
+                SundayBTime = new TimeSpan(2, 14, 00),
+                MondayNBNote = "This is sample task for project",
+                TuesdayNBNote = "This is sample task for project",
+                WednesdayNBNote
+                = "This is sample task for project",
+                ThursdayNBNote = "This is sample task for project",
+                FridayNBNote = "This is sample task for project",
+                SaturdayNBNote = "This is sample task for project",
+                SundayNBNote = "This is sample task for project",
+                MondayNBTime = new TimeSpan(2, 14, 00),
+                TuesdayNBTime = new TimeSpan(2, 15, 00),
+                WednesdayNBTime = new TimeSpan(2, 16, 00),
+                ThursdayNBTime = new TimeSpan(2, 17, 00),
+                FridayNBTime = new TimeSpan(2, 18, 00),
+                SaturdayNBTime = new TimeSpan(2, 19, 00),
+                SundayNBTime = new TimeSpan(2, 20, 00),
+                MondayDate = new DateTime(2016, 11, 14),
+                TuesdayDate = new DateTime(2016, 11, 15),
+                WednesdayDate = new DateTime(2016, 11, 16),
+                ThursdayDate = new DateTime(2016, 11, 17),
+                FridayDate = new DateTime(2016, 11, 18),
+                SaturdayDate = new DateTime(2016, 11, 19),
+                SundayDate = new DateTime(2016, 11, 20),
+                Status = false,
                 ID = 1
             });
             timesheetList.Add(new Timesheet
             {
-                project = new Project { ID = 2, ProjectName = "Second" },
-                task = new Task { ID = 1, project = new Project { ID = 1 }, TaskName = "Development" },
-                timesheetGroupID = 1,
-                monday_b_note = "This is sample task for project",
-                tuesday_b_note = "This is sample task for project",
-                wednesday_b_note = "This is sample task for project",
-                thursday_b_note = "This is sample task for project",
-                friday_b_note = "This is sample task for project",
-                saturday_b_note = "This is sample task for project",
-                sunday_b_note = "This is sample task for project",
-                monday_b_time = new TimeSpan(2, 14, 00),
-                tuesday_b_time = new TimeSpan(2, 14, 00),
-                wednesday_b_time = new TimeSpan(2, 14, 00),
-                thursday_b_time = new TimeSpan(2, 14, 00),
-                friday_b_time = new TimeSpan(2, 14, 00),
-                saturday_b_time = new TimeSpan(2, 14, 00),
-                sunday_b_time = new TimeSpan(2, 14, 00),
-                monday_nb_note = "This is sample task for project",
-                tuesday_nb_note = "This is sample task for project",
-                wednesday_nb_note = "This is sample task for project",
-                thursday_nb_note = "This is sample task for project",
-                friday_nb_note = "This is sample task for project",
-                saturday_nb_note = "This is sample task for project",
-                sunday_nb_note = "This is sample task for project",
-                monday_nb_time = new TimeSpan(2, 14, 00),
-                tuesday_nb_time = new TimeSpan(2, 15, 00),
-                wednesday_nb_time = new TimeSpan(2, 16, 00),
-                thursday_nb_time = new TimeSpan(2, 17, 00),
-                friday_nb_time = new TimeSpan(2, 18, 00),
-                saturday_nb_time = new TimeSpan(2, 19, 00),
-                sunday_nb_time = new TimeSpan(2, 20, 00),
-                monday_dt = new DateTime(2016, 11, 14),
-                tuesday_dt = new DateTime(2016, 11, 15),
-                wednesday_dt = new DateTime(2016, 11, 16),
-                thursday_dt = new DateTime(2016, 11, 17),
-                friday_dt = new DateTime(2016, 11, 18),
-                saturday_dt = new DateTime(2016, 11, 19),
-                sunday_dt = new DateTime(2016, 11, 20),
-                status = false,
+                Project = new Project { ID = 2, Name = "Second" },
+                Task = new Task { ID = 1, Project = new Project { ID = 1 }, TaskName = "Development" },
+                TimesheetGroupID = 1,
+                MondayBNote = "This is sample task for project",
+                TuesdayBNote = "This is sample task for project",
+                WednesdayBNote = "This is sample task for project",
+                ThursdayBNote = "This is sample task for project",
+                FridayBNote = "This is sample task for project",
+                SaturdayBNote = "This is sample task for project",
+                SundayBNote = "This is sample task for project",
+                MondayBTime = new TimeSpan(2, 14, 00),
+                TuesdayBTime = new TimeSpan(2, 14, 00),
+                WednesdayBTime = new TimeSpan(2, 14, 00),
+                ThursdayBTime = new TimeSpan(2, 14, 00),
+                FridayBTime = new TimeSpan(2, 14, 00),
+                SaturdayBTime = new TimeSpan(2, 14, 00),
+                SundayBTime = new TimeSpan(2, 14, 00),
+                MondayNBNote = "This is sample task for project",
+                TuesdayNBNote = "This is sample task for project",
+                WednesdayNBNote
+                = "This is sample task for project",
+                ThursdayNBNote = "This is sample task for project",
+                FridayNBNote = "This is sample task for project",
+                SaturdayNBNote = "This is sample task for project",
+                SundayNBNote = "This is sample task for project",
+                MondayNBTime = new TimeSpan(2, 14, 00),
+                TuesdayNBTime = new TimeSpan(2, 15, 00),
+                WednesdayNBTime = new TimeSpan(2, 16, 00),
+                ThursdayNBTime = new TimeSpan(2, 17, 00),
+                FridayNBTime = new TimeSpan(2, 18, 00),
+                SaturdayNBTime = new TimeSpan(2, 19, 00),
+                SundayNBTime = new TimeSpan(2, 20, 00),
+                MondayDate = new DateTime(2016, 11, 14),
+                TuesdayDate = new DateTime(2016, 11, 15),
+                WednesdayDate = new DateTime(2016, 11, 16),
+                ThursdayDate = new DateTime(2016, 11, 17),
+                FridayDate = new DateTime(2016, 11, 18),
+                SaturdayDate = new DateTime(2016, 11, 19),
+                SundayDate = new DateTime(2016, 11, 20),
+                Status = false,
                 ID = 2
             });
 
@@ -127,45 +129,45 @@ namespace Espl.Linkup.Web.Controllers.Timesheets
         public IHttpActionResult Put(int id, Timesheet value)
         {
             Timesheet result = timesheetList.Where(p => p.ID == id).FirstOrDefault();
-            result.project = value.project;
-            result.task = value.task;
-            result.timesheetGroupID = value.timesheetGroupID;
-            result.monday_b_note = value.monday_b_note;
-            result.tuesday_b_note = value.tuesday_b_note;
-            result.wednesday_b_note = value.wednesday_b_note;
-            result.thursday_b_note = value.thursday_b_note;
-            result.friday_b_note = value.friday_b_note;
-            result.saturday_b_note = value.saturday_b_note;
-            result.sunday_b_note = value.sunday_b_note;
-            result.monday_b_time = value.monday_b_time;
-            result.tuesday_b_time = value.tuesday_b_time;
-            result.wednesday_b_time = value.wednesday_b_time;
-            result.thursday_b_time = value.thursday_b_time;
-            result.friday_b_time = value.friday_b_time;
-            result.saturday_b_time = value.saturday_b_time;
-            result.sunday_b_time = value.sunday_b_time;
-            result.monday_nb_note = value.monday_nb_note;
-            result.tuesday_nb_note = value.tuesday_nb_note;
-            result.wednesday_nb_note = value.wednesday_nb_note;
-            result.thursday_nb_note = value.thursday_nb_note;
-            result.friday_nb_note = value.friday_nb_note;
-            result.saturday_nb_note = value.saturday_nb_note;
-            result.sunday_nb_note = value.sunday_nb_note;
-            result.monday_nb_time = value.monday_nb_time;
-            result.tuesday_nb_time = value.tuesday_nb_time;
-            result.wednesday_nb_time = value.wednesday_nb_time;
-            result.thursday_nb_time = value.thursday_nb_time;
-            result.friday_nb_time = value.friday_nb_time;
-            result.saturday_nb_time = value.saturday_nb_time;
-            result.sunday_nb_time = value.sunday_nb_time;
-            result.monday_dt = value.monday_dt;
-            result.tuesday_dt = value.tuesday_dt;
-            result.wednesday_dt = value.wednesday_dt;
-            result.thursday_dt = value.thursday_dt;
-            result.friday_dt = value.friday_dt;
-            result.saturday_dt = value.saturday_dt;
-            result.sunday_dt = value.sunday_dt;
-            result.status = value.status;
+            result.Project = value.Project;
+            result.Task = value.Task;
+            result.TimesheetGroupID = value.TimesheetGroupID;
+            result.MondayBNote = value.MondayBNote;
+            result.TuesdayBNote = value.TuesdayBNote;
+            result.WednesdayBNote = value.WednesdayBNote;
+            result.ThursdayBNote = value.ThursdayBNote;
+            result.FridayBNote = value.FridayBNote;
+            result.SaturdayBNote = value.SaturdayBNote;
+            result.SundayBNote = value.SundayBNote;
+            result.MondayBNote = value.MondayBNote;
+            result.TuesdayBNote = value.TuesdayBNote;
+            result.WednesdayBNote = value.WednesdayBNote;
+            result.ThursdayBTime = value.ThursdayBTime;
+            result.FridayBTime = value.FridayBTime;
+            result.SaturdayBTime = value.SaturdayBTime;
+            result.SundayBTime = value.SundayBTime;
+            result.MondayNBNote = value.MondayNBNote;
+            result.TuesdayNBNote = value.TuesdayNBNote;
+            result.WednesdayNBNote = value.WednesdayNBNote;
+            result.ThursdayNBNote = value.ThursdayNBNote;
+            result.FridayNBNote = value.FridayNBNote;
+            result.SaturdayNBNote = value.SaturdayNBNote;
+            result.SundayNBNote = value.SundayNBNote;
+            result.MondayNBTime = value.MondayNBTime;
+            result.TuesdayNBTime = value.TuesdayNBTime;
+            result.WednesdayNBTime = value.WednesdayNBTime;
+            result.ThursdayNBTime = value.ThursdayNBTime;
+            result.FridayNBTime = value.FridayNBTime;
+            result.SaturdayNBTime = value.SaturdayNBTime;
+            result.SundayNBTime = value.SundayNBTime;
+            result.MondayDate = value.MondayDate;
+            result.TuesdayDate = value.TuesdayDate;
+            result.WednesdayDate = value.WednesdayDate;
+            result.ThursdayDate = value.ThursdayDate;
+            result.FridayDate = value.FridayDate;
+            result.SaturdayDate = value.SaturdayDate;
+            result.SundayDate = value.SundayDate;
+            result.Status = value.Status;
             return Ok(result);
         }
 

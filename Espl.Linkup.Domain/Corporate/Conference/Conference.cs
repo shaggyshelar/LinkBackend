@@ -30,5 +30,9 @@ namespace Espl.Linkup.Domain.Corporate.Conferences
         public string SpecialComments { get; set; }
         public long NumberOfGuests { get; set; }
         public bool IsDeleted { get; set; }
+
+
+        public bool IsAllDay { get; set; }
+        public Common.Corporate.Rooms.IRoom Room { get; set; }
     }
 }

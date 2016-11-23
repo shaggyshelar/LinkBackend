@@ -51,7 +51,7 @@ namespace Espl.Linkup.Web.Tests.Controllers
 
             Espl.Linkup.Domain.Leaves.Leave leaveObj = new Espl.Linkup.Domain.Leaves.Leave
                  {
-                     NumberOFLeave = 12,
+                     NumberOfLeave = 12,
                      Reason = "Sample",
                      Status = "Approved",
                      StartDate = new DateTime(2016, 12, 12),
@@ -78,7 +78,7 @@ namespace Espl.Linkup.Web.Tests.Controllers
             Espl.Linkup.Domain.Leaves.Leave leaveObj = new Espl.Linkup.Domain.Leaves.Leave
             {
                 ID=1,
-                NumberOFLeave = 12,
+                NumberOfLeave = 12,
                 Reason = "Put request sucessfull",
                 Status = "Approved",
                 StartDate = new DateTime(2016, 12, 12),

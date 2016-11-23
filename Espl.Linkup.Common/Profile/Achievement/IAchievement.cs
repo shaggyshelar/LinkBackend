@@ -11,7 +11,7 @@ namespace Espl.Linkup.Common.Achievement
     {
         #region Properties
         //
-        string AchievementName { get; set; }
+        string Name { get; set; }
         string Status { get; set; }
         string Comments { get; set; }
 

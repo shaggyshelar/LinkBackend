@@ -1,4 +1,6 @@
 ﻿using Espl.Linkup.Domain.Corporate.Ticket;
+using Espl.Linkup.Domain.Departments;
+using Espl.Linkup.Domain.Profile.Employee;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +19,12 @@ namespace Espl.Linkup.Web.Controllers.Corporate
 
             ticketList.Add(new Ticket
             {
+                employee = new Employee { ID = 1 },
                 Concern = "Software Installation",
-                Department = "IT",
+                Department = new Department{ID=1,Name="EBS"},
                 Description = "Not able to connect with bit bucket",
-                Priority = "High",
-                CreatedOn = new DateTime(10, 10, 2016),
+                Priority = Espl.Linkup.Domain.Enums.Enum.Priority.High,
+                CreatedOn = new DateTime(2016, 10, 10),
                 Status = "Closed",
                 Isclosed = true,
                 IsReopen = true,
@@ -46,7 +49,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate
             result.Department = value.Department;
             result.Description = value.Description;
             result.Priority = value.Priority;
-            result.CreatedOn = new DateTime(10, 10, 2016);
+            result.CreatedOn = new DateTime(2016, 10, 10);
             result.Status = value.Status;
             result.Isclosed = value.Isclosed;
             result.IsReopen = value.IsReopen;
@@ -64,7 +67,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate
             result.Department = value.Department;
             result.Description = value.Description;
             result.Priority = value.Priority;
-            result.CreatedOn = new DateTime(10, 10, 2016);
+            result.CreatedOn = new DateTime(2016, 10, 10);
             result.Status = value.Status;
             result.Isclosed = value.Isclosed;
             result.IsReopen = value.IsReopen;

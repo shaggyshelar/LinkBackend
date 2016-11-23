@@ -1,4 +1,5 @@
 ﻿using Espl.Linkup.Domain.Profile.Skill;
+using Espl.Linkup.Domain.SkillTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,15 +18,15 @@ namespace Espl.Linkup.Web.Controllers.Profile
 
             skilllist.Add(new Skill
             {
-                Skills = "C#,Asp.net",
-                SkillType = "Programing lang",
+                Description = "C#,Asp.net",
+                Type = new SkillType {ID=1,Name="Progrming Lang" },
                 Comments = "Good Work",
                 ID = 1
             });
             skilllist.Add(new Skill
            {
-               Skills = "Sql",
-               SkillType = "Database",
+               Description = "Sql",
+               Type = new SkillType { ID = 2, Name = "Database" },
                Comments = "Good Work",
                ID = 2
            });
@@ -51,8 +52,8 @@ namespace Espl.Linkup.Web.Controllers.Profile
         public IHttpActionResult Put(int id, Skill value)
         {
             Skill result = skilllist.Where(p => p.ID == id).FirstOrDefault();
-            result.Skills = value.Skills;
-            result.SkillType = value.SkillType;
+            result.Description = value.Description;
+            result.Type = value.Type;
             result.Comments = value.Comments;
             return Ok(result);
         }

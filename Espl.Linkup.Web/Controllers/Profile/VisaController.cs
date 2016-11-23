@@ -16,19 +16,19 @@ namespace Espl.Linkup.Web.Controllers.Profile
 
             visaList.Add(new Visa
             {
-                VisaNumber = "123456",
-                ExpDate = new DateTime(12, 12, 2020),
+                Number = "123456",
+                ExpDate = new DateTime( 2020,12, 12),
                 Comments = "Good Work",
-                VisaType = "L1",
+                Type = "L1",
                 ID = 1
             });
 
             visaList.Add(new Visa
             {
-                VisaNumber = "123456",
-                ExpDate = new DateTime(12, 12, 2020),
+                Number = "123456",
+                ExpDate = new DateTime(2020,12, 12),
                 Comments = "Good Work",
-                VisaType = "H1",
+                Type = "H1",
                 ID = 2
             });
             return Ok(visaList);
@@ -51,10 +51,10 @@ namespace Espl.Linkup.Web.Controllers.Profile
         public IHttpActionResult Put(int id, Visa value)
         {
             Visa result = visaList.Where(p => p.ID == id).FirstOrDefault();
-            result.VisaNumber = value.VisaNumber;
-            result.ExpDate = new DateTime(12, 12, 2020);
+            result.Number = value.Number;
+            result.ExpDate = new DateTime( 2020,12, 12);
             result.Comments = value.Comments;
-            result.VisaType = value.VisaType;
+            result.Type = value.Type;
             return Ok(result);
         }
 

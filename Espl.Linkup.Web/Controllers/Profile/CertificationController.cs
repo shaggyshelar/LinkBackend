@@ -1,4 +1,4 @@
-﻿using Espl.Linkup.Common.Certification;
+﻿using Espl.Linkup.Common.Certifications;
 using Espl.Linkup.Domain.Profile.Certification;
 using System;
 using System.Collections.Generic;
@@ -20,8 +20,8 @@ namespace Espl.Linkup.Web.Controllers.Profile
                 new Certification
                 {
                     ID = 1,
-                    CertificationCode = "70-480",
-                    CertificationDate = new DateTime().AddDays(-10),
+                    Code = "70-480",
+                    Date = new DateTime().AddDays(-10),
                     Status = "Approved",
                     Comments = "Great"
                 }
@@ -49,8 +49,8 @@ namespace Espl.Linkup.Web.Controllers.Profile
         public IHttpActionResult Put(int id, Certification value)
         {
             Certification result = certificationList.Where(p => p.ID == id).FirstOrDefault();
-            result.CertificationCode = value.CertificationCode;
-            result.CertificationDate = new DateTime().AddDays(-10);
+            result.Code = value.Code;
+            result.Date = new DateTime().AddDays(-10);
             result.Status = value.Status;
             result.Comments = value.Comments;
             return Ok(result);

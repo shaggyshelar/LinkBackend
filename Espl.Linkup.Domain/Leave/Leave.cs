@@ -24,7 +24,7 @@ namespace Espl.Linkup.Domain.Leaves
         public Common.Employee.IEmployee Employee { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public long NumberOFLeave { get; set; }
+        public long NumberOfLeave { get; set; }
         public string Status { get; set; }
         public string Reason { get; set; }
     }

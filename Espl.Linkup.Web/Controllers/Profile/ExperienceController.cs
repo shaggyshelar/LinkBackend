@@ -1,4 +1,6 @@
-﻿using Espl.Linkup.Domain.Profile.Experience;
+﻿using Espl.Linkup.Domain.Clients;
+using Espl.Linkup.Domain.Profile.Experience;
+using Espl.Linkup.Domain.Projects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,11 +25,12 @@ namespace Espl.Linkup.Web.Controllers.Profile
                     Duration = "4 Years",
                     Status = "Approved",
                     Comments = "Approved",
-                    Project = "JUSTAarogyam",
-                    Client = "Self",
+                    Project=new Project{ID=1,Name="Linkup" },
+                    // Project = "JUSTAarogyam",
+                    Client = new Client { ID = 1, Name = "Self" },
                     Role = "Devloper",
                     Environment = ".net",
-                    CurrentProject = true,
+                    IsCurrentProject = true,
                 }
                 );
 

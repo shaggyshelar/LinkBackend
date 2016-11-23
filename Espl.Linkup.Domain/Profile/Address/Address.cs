@@ -23,5 +23,7 @@ namespace Espl.Linkup.Domain.Profile.Address
         public string CurrentAddFilePath { get; set; }
         public string PermanantAdd { get; set; }
         public string PermanantAddFilePath { get; set; }
+        public string Comments { get; set; }
+        public string Status { get; set; }
     }
 }

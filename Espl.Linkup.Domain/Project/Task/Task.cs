@@ -20,6 +20,6 @@ namespace Espl.Linkup.Domain.Projects.Tasks
         }
 
         public string TaskName { get; set; }
-        public IProject project { get; set; }
+        public IProject Project { get; set; }
     }
 }

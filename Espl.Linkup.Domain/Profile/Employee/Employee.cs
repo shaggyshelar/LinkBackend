@@ -1,4 +1,5 @@
 ﻿using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.PFs;
 using Espl.Linkup.Domain.Core;
 using System;
 using System.Collections.Generic;
@@ -25,14 +26,12 @@ namespace Espl.Linkup.Domain.Profile.Employee
         public string ContactNo { get; set; }
         public string CurrentAdd { get; set; }
         public string Email { get; set; }
-        public string ESPL_PF_No { get; set; }
-        public string PreviousPFNo { get; set; }
+        public IPF PF { get; set; }
         public DateTime CareerStartDate { get; set; }
         public DateTime LastWorkingDayOfPrevEmployer { get; set; }
-        public string EmergencyContactNumber { get; set; }
-        public string EmergencyContactName { get; set; }
         public string BloodGroup { get; set; }
         public string SkypeID { get; set; }
         public string ProfilePath { get; set; }
+        public Common.Contacts.IContact Contact { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Espl.Linkup.Common.Core;
+﻿using Espl.Linkup.Common.Classes;
+using Espl.Linkup.Common.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +12,14 @@ namespace Espl.Linkup.Common.Education
     {
         #region Properties
         //
-        string Class { get; set; }
+        IClass Class { get; set; }
         string Degree { get; set; }
         string Grade { get; set; }
         string Percentage { get; set; }
         string YearOfPassing { get; set; }
         string Status { get; set; }
         string Comments { get; set; }
-        string Certificate { get; set; }
+        string FilePath { get; set; }
 
         #endregion Properties
     }

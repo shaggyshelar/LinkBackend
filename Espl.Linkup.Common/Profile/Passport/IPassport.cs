@@ -11,12 +11,13 @@ namespace Espl.Linkup.Common.Passport
     {
         #region Properties
         //
-        string PassportNumber { get; set; }
+        string Number { get; set; }
         DateTime ExpDate { get; set; }
-        string PassportType { get; set; }
+        DateTime IssueDate { get; set; }
+        string Type { get; set; }
         string Status { get; set; }
         string Comments { get; set; }
-        string PassportFilePath { get; set; }
+        string FilePath { get; set; }
 
         #endregion Properties
     }

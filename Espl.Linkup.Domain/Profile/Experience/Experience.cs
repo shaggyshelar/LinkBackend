@@ -1,4 +1,6 @@
-﻿using Espl.Linkup.Common.Experience;
+﻿using Espl.Linkup.Common.Clients;
+using Espl.Linkup.Common.Experience;
+using Espl.Linkup.Common.Projects;
 using Espl.Linkup.Domain.Core;
 using System;
 using System.Collections.Generic;
@@ -18,14 +20,18 @@ namespace Espl.Linkup.Domain.Profile.Experience
             throw new NotImplementedException();
         }
 
-        public string Project { get; set; }
+        public IProject Project { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Client { get; set; }
+        public IClient Client { get; set; }
         public string Role { get; set; }
         public string Environment { get; set; }
         public string Duration { get; set; }
-        public bool CurrentProject { get; set; }
+
+        public string Description { get; set; }
+        public string Responsibilites { get; set; }
+
+        public bool IsCurrentProject { get; set; }
         public string Status { get; set; }
         public string Comments { get; set; }
         public string ExperienceFilePath { get; set; }

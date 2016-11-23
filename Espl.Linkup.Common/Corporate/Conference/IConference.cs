@@ -1,4 +1,5 @@
 ﻿using Espl.Linkup.Common.Core;
+using Espl.Linkup.Common.Corporate.Rooms;
 using Espl.Linkup.Common.Corporate.Treatments;
 using Espl.Linkup.Common.Employee;
 using System;
@@ -22,6 +23,8 @@ namespace Espl.Linkup.Common.Corporate.Conferences
         string SpecialComments { get; set; }
         Int64 NumberOfGuests { get; set; }
         bool IsDeleted { get; set; }
+        bool IsAllDay { get; set; }
+        IRoom Room { get; set; }
         #endregion Properties
     }
 }

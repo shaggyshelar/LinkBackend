@@ -13,7 +13,7 @@ namespace Espl.Linkup.Common.Projects.Tasks
         #region Properties
         //
         string TaskName { get; set; }
-        IProject project { get; set; }
+        IProject Project { get; set; }
         #endregion Properties
     }
 }

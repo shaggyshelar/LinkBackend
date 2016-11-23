@@ -1,5 +1,6 @@
 ﻿
 using Espl.Linkup.Common.Corporate.Ticket;
+using Espl.Linkup.Common.Departments;
 using Espl.Linkup.Domain.Core;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,9 @@ namespace Espl.Linkup.Domain.Corporate.Ticket
             throw new NotImplementedException();
         }
 
-        public string Department { get; set; }
+        public IDepartment Department { get; set; }
         public DateTime HolidayDate { get; set; }
-        public string Priority { get; set; }
+        public Enum Priority { get; set; }
         public string Concern { get; set; }
         public string Description { get; set; }
         public Common.Employee.IEmployee ResolvedBy { get; set; }

@@ -1,4 +1,6 @@
-﻿using Espl.Linkup.Domain.Profile.Employee;
+﻿using Espl.Linkup.Domain.PFs;
+using Espl.Linkup.Domain.Profile.Contact;
+using Espl.Linkup.Domain.Profile.Employee;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,12 +26,10 @@ namespace Espl.Linkup.Web.Controllers.Profile
                     ContactNo = "1234567890",
                     Email = "amol@gmail.com",
                     DOB = new DateTime(1988, 11, 28),
-                    ESPL_PF_No = "123",
-                    PreviousPFNo = "N/A",
+                    PF = new PF { ID = 1, PreviousOrgPFNumber = "123456", CurrentOrgPFNumber = "789456" },
                     CareerStartDate = new DateTime(2012, 11, 28),
                     LastWorkingDayOfPrevEmployer = new DateTime(1988, 11, 27),
-                    EmergencyContactName = "Amol",
-                    EmergencyContactNumber = "1234567890",
+                    Contact = new Contact { ID = 1, Name = "Amol", Number = "12569874" },
                     SkypeID = "123"
                 }
                 );
@@ -61,12 +61,10 @@ namespace Espl.Linkup.Web.Controllers.Profile
             result.ContactNo = result.ContactNo;
             result.Email = result.Email;
             result.DOB = new DateTime(1988, 11, 28);
-            result.ESPL_PF_No = result.ESPL_PF_No;
-            result.PreviousPFNo = result.PreviousPFNo;
+            result.PF = result.PF;
             result.CareerStartDate = new DateTime(2012, 11, 28);
             result.LastWorkingDayOfPrevEmployer = new DateTime(1988, 11, 27);
-            result.EmergencyContactName = result.EmergencyContactName;
-            result.EmergencyContactNumber = result.EmergencyContactNumber;
+            result.Contact = result.Contact;
             result.SkypeID = result.SkypeID;
             return Ok(result);
         }

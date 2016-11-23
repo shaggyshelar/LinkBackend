@@ -18,7 +18,7 @@ namespace Espl.Linkup.Domain.Projects
             throw new NotImplementedException();
         }
 
-        public string ProjectName { get; set; }
-        public Common.Employee.IEmployee ProjectManager { get; set; }
+        public string Name { get; set; }
+        public Common.Employee.IEmployee Manager { get; set; }
     }
 }
