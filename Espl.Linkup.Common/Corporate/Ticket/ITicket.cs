@@ -1,6 +1,6 @@
 ﻿using Espl.Linkup.Common.Core;
 using Espl.Linkup.Common.Departments;
-using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,7 @@ namespace Espl.Linkup.Common.Corporate.Ticket
         Enum Priority { get; set; }
         string Concern { get; set; }
         string Description { get; set; }
-        IEmployee ResolvedBy { get; set; }
+        IUser ResolvedBy { get; set; }
         bool Isclosed { get; set; }
         bool IsReopen { get; set; }
         string Status { get; set; }

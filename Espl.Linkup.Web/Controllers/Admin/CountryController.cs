@@ -1,8 +1,8 @@
 ﻿using Espl.Linkup.Common.Corporate.Treatments;
-using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.Users;
 using Espl.Linkup.Domain.Corporate.Treatments;
 using Espl.Linkup.Domain.Countries;
-using Espl.Linkup.Domain.Profile.Employee;
+using Espl.Linkup.Domain.Profile.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +46,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate
         {
             countryList.Add(value);
             value.ID = countryList.Count;
-            return Ok(value.ID);
+            return Ok(value);
         }
 
         // PUT: api/Country/5

@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace Espl.Linkup.Web.Controllers.Corporate
+namespace Espl.Linkup.Web.Controllers.Master
 {
     public class DepartmentController : ApiController
     {
@@ -42,7 +42,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate
         {
             departmentList.Add(value);
             value.ID = departmentList.Count;
-            return Ok(value.ID);
+            return Ok(value);
         }
 
         // PUT: api/Department/5

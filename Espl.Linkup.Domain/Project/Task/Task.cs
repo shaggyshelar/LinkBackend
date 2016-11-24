@@ -19,7 +19,7 @@ namespace Espl.Linkup.Domain.Projects.Tasks
             throw new NotImplementedException();
         }
 
-        public string TaskName { get; set; }
+        public string Name { get; set; }
         public IProject Project { get; set; }
     }
 }

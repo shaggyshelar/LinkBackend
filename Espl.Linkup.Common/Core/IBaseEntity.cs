@@ -1,5 +1,5 @@
 ﻿
-using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace Espl.Linkup.Common.Core
         long? UpdatedBy { get; set; }
         DateTime? UpdatedOn { get; set; }
         bool DeleteFlag { get; set; }
-        IEmployee employee { get; set; }
+        IUser User { get; set; }
         IBaseSearchResult<IEntity> Search(IEntitySearch entitySearch);
         IList<long> Save(IList<IEntity> entities);
         bool Remove(IEntity entity);

@@ -1,5 +1,5 @@
 ﻿using Espl.Linkup.Common.Core;
-using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace Espl.Linkup.Common.Leaves
     {
         #region Properties
         //
-        IEmployee Employee { get; set; }
+        IUser User { get; set; }
         DateTime StartDate { get; set; }
         DateTime EndDate { get; set; }
         Int64 NumberOfLeave { get; set; }

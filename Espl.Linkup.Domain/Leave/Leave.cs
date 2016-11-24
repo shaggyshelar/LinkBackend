@@ -21,7 +21,6 @@ namespace Espl.Linkup.Domain.Leaves
 
 
 
-        public Common.Employee.IEmployee Employee { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public long NumberOfLeave { get; set; }

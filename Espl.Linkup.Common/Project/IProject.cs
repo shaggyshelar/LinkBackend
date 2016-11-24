@@ -1,5 +1,5 @@
 ﻿using Espl.Linkup.Common.Core;
-using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace Espl.Linkup.Common.Projects
         #region Properties
         //
         string Name { get; set; }
-        IEmployee Manager { get; set; }
+        IUser Manager { get; set; }
         #endregion Properties
     }
 }

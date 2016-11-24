@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace Espl.Linkup.Web.Controllers.Corporate
+namespace Espl.Linkup.Web.Controllers.Master
 {
     public class SkillTypeController : ApiController
     {
@@ -42,7 +42,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate
         {
             skillTypeList.Add(value);
             value.ID = skillTypeList.Count;
-            return Ok(value.ID);
+            return Ok(value);
         }
 
         // PUT: api/SkillType/5

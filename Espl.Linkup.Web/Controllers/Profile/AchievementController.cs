@@ -13,7 +13,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
     {
         static List<Achievement> achievementList = new List<Achievement>();
         // GET: api/Achievement
-        public IHttpActionResult Get(Int32 pageindex, Int32 TotalRecords)
+        public IHttpActionResult Get()
         {
 
             achievementList.Add(new Achievement

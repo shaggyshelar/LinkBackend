@@ -24,7 +24,7 @@ namespace Espl.Linkup.Web.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.IsTrue(result.Content.Count >=2);
+            Assert.IsTrue(result.Content.Count >= 2);
         }
 
 
@@ -84,7 +84,7 @@ namespace Espl.Linkup.Web.Tests.Controllers
                 HolidayDate = new DateTime()
 
             };
-            var actResult = controller.Post(HolidayObj);
+            var actResult = controller.Put(1, HolidayObj);
             // Act
             var result = actResult as OkNegotiatedContentResult<Espl.Linkup.Domain.Leave.Holiday.Holiday>;
 
@@ -107,7 +107,7 @@ namespace Espl.Linkup.Web.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.IsTrue(result.Content== true);
+            Assert.IsTrue(result.Content == true);
         }
 
     }

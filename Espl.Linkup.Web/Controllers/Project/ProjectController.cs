@@ -1,4 +1,4 @@
-﻿using Espl.Linkup.Domain.Profile.Employee;
+﻿using Espl.Linkup.Domain.Profile.Users;
 using Espl.Linkup.Domain.Projects;
 using System;
 using System.Collections.Generic;
@@ -19,13 +19,13 @@ namespace Espl.Linkup.Web.Controllers.Projects
             projectList.Add(new Project
             {
                 Name = "First",
-                Manager = new Employee { ID = 1, Name = "Amol 1" },
+                Manager = new User { ID = 1, Name = "Amol 1" },
                 ID = 1
             });
             projectList.Add(new Project
             {
                 Name = "Second",
-                Manager = new Employee { ID = 1, Name = "Amol 2" },
+                Manager = new User { ID = 1, Name = "Amol 2" },
                 ID = 1
             });
 
@@ -47,7 +47,7 @@ namespace Espl.Linkup.Web.Controllers.Projects
             result.Manager = value.Manager;
             projectList.Add(result);
             result.ID = projectList.Count;
-            return Ok(result.ID);
+            return Ok(result);
         }
 
         // PUT: api/Project/5

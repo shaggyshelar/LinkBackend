@@ -1,4 +1,4 @@
-﻿using Espl.Linkup.Common.Employee;
+﻿using Espl.Linkup.Common.Users;
 using Espl.Linkup.Common.Skill;
 using Espl.Linkup.Common.SkillTypes;
 using Espl.Linkup.Domain.Core;
@@ -23,7 +23,7 @@ namespace Espl.Linkup.Domain.Profile.Skill
 
         public string Description { get; set; }
         public ISkillType Type { get; set; }
-        public IList<IEmployee> Approvers { get; set; }
+        public IList<IUser> Approvers { get; set; }
         public string Status { get; set; }
         public string Comments { get; set; }
     }

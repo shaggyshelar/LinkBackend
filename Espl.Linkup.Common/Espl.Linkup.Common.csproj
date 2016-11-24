@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="Admin\Country\ICountry.cs" />
     <Compile Include="Admin\Country\ICountrySearch.cs" />
+    <Compile Include="Admin\Feature\IFeature.cs" />
+    <Compile Include="Admin\Feature\IFeatureSearch.cs" />
     <Compile Include="Admin\Role\IRole.cs" />
     <Compile Include="Admin\Role\IRoleSearch.cs" />
     <Compile Include="Admin\State\IState.cs" />
@@ -80,8 +82,8 @@
     <Compile Include="Profile\Address\IAddressSearch.cs" />
     <Compile Include="Profile\Contact\IContact.cs" />
     <Compile Include="Profile\Contact\IContactSearch.cs" />
-    <Compile Include="Profile\Employee\IEmployee.cs" />
-    <Compile Include="Profile\Employee\IEmployeeSearch.cs" />
+    <Compile Include="Profile\User\IUser.cs" />
+    <Compile Include="Profile\User\IUserSearch.cs" />
     <Compile Include="Profile\Nominee\INominee.cs" />
     <Compile Include="Profile\Nominee\INomineeSearch.cs" />
     <Compile Include="Profile\Passport\IPassport.cs" />

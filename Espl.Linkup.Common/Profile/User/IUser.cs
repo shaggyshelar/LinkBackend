@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Espl.Linkup.Common.Employee
+namespace Espl.Linkup.Common.Users
 {
-    public interface IEmployee : IBaseEntity<IEmployee, IEmployeeSearch>
+    public interface IUser : IBaseEntity<IUser, IUserSearch>
     {
         #region Properties
         //
@@ -25,7 +25,8 @@ namespace Espl.Linkup.Common.Employee
         string BloodGroup { get; set; }
         string SkypeID { get; set; }
         string ProfilePath { get; set; }
-
+        string UserName { get; set; }
+        string Password { get; set; }
         #endregion Properties
     }
 }

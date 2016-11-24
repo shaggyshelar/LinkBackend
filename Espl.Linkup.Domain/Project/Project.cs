@@ -19,6 +19,6 @@ namespace Espl.Linkup.Domain.Projects
         }
 
         public string Name { get; set; }
-        public Common.Employee.IEmployee Manager { get; set; }
+        public Common.Users.IUser Manager { get; set; }
     }
 }

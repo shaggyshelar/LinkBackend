@@ -1,8 +1,8 @@
 ﻿using Espl.Linkup.Common.Corporate.Treatments;
-using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.Users;
 using Espl.Linkup.Domain.Corporate.Conferences;
 using Espl.Linkup.Domain.Corporate.Treatments;
-using Espl.Linkup.Domain.Profile.Employee;
+using Espl.Linkup.Domain.Profile.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +19,9 @@ namespace Espl.Linkup.Web.Controllers.Corporate
         // GET: api/Conference
         public IHttpActionResult Get()
         {
-            List<IEmployee> empList = new List<IEmployee>();
-            empList.Add(new Employee { Name = "Amol", ID = 1 });
-            empList.Add(new Employee { Name = "Ganesh", ID = 2 });
+            List<IUser> empList = new List<IUser>();
+            empList.Add(new User { Name = "Amol", ID = 1 });
+            empList.Add(new User { Name = "Ganesh", ID = 2 });
 
             List<ITreatment> teatmentList = new List<ITreatment>();
             teatmentList.Add(new Treatment { TreatmentName = "Tea", ID = 1 });
@@ -34,8 +34,8 @@ namespace Espl.Linkup.Web.Controllers.Corporate
                 Title = "Project Meeting",
                 IsDeleted = false,
                 Description = "This is Project Status Metting",
-                EndTime = new DateTime(2016, 11, 11, 15, 00, 00),
-                StartTime = new DateTime(2016, 11, 11, 45, 00, 00),
+                EndTime = new DateTime(2016, 11, 11, 15,55,01),
+                StartTime = new DateTime(2016, 11, 11, 15, 01, 01),
                 SpecialComments = "This is Special Comments",
                 Attendees = empList,
                 SpecialTreatment = teatmentList
@@ -46,7 +46,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate
                 IsDeleted = false,
                 Description = "This is Project Status Metting",
                 EndTime = new DateTime(2016, 11, 11, 15, 00, 00),
-                StartTime = new DateTime(2016, 11, 11, 45, 00, 00),
+                StartTime = new DateTime(2016, 11, 11, 16, 00, 00),
                 SpecialComments = "This is Special Comments",
                 Attendees = empList,
                 SpecialTreatment = teatmentList,
@@ -67,7 +67,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate
         {
             conferenceList.Add(value);
             value.ID = conferenceList.Count;
-            return Ok(value.ID);
+            return Ok(value);
         }
 
         // PUT: api/Conference/5

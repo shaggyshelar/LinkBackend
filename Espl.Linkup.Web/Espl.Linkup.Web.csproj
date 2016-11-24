@@ -121,13 +121,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Admin\FeatureController.cs" />
     <Compile Include="Controllers\Admin\RoleController.cs" />
     <Compile Include="Controllers\Admin\CountryController.cs" />
     <Compile Include="Controllers\Corporate\ConferenceController.cs" />
-    <Compile Include="Controllers\Corporate\LogTicketController.cs" />
+    <Compile Include="Controllers\Corporate\TicketController.cs" />
     <Compile Include="Controllers\Corporate\RoomController.cs" />
     <Compile Include="Controllers\Corporate\TreatmentController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Leave\HolidayController.cs" />
     <Compile Include="Controllers\Leave\LeaveController.cs" />
     <Compile Include="Controllers\Leave\LeaveDetailController.cs" />
@@ -142,7 +142,7 @@
     <Compile Include="Controllers\Profile\AddressController.cs" />
     <Compile Include="Controllers\Profile\CertificationController.cs" />
     <Compile Include="Controllers\Profile\EducationController.cs" />
-    <Compile Include="Controllers\Profile\EmployeeController.cs" />
+    <Compile Include="Controllers\Profile\UserController.cs" />
     <Compile Include="Controllers\Profile\EmploymentHistoryController.cs" />
     <Compile Include="Controllers\Profile\ExperienceController.cs" />
     <Compile Include="Controllers\Profile\IDProofController.cs" />

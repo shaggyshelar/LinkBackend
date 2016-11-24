@@ -44,7 +44,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate.Treatments
             result.TreatmentName = value.TreatmentName;
             TreatmentList.Add(result);
             result.ID = TreatmentList.Count;
-            return Ok(result.ID);
+            return Ok(result);
         }
 
         // PUT: api/Treatment/5

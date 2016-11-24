@@ -1,6 +1,6 @@
 ﻿using Espl.Linkup.Domain.Corporate.Ticket;
 using Espl.Linkup.Domain.Departments;
-using Espl.Linkup.Domain.Profile.Employee;
+using Espl.Linkup.Domain.Profile.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace Espl.Linkup.Web.Controllers.Corporate
 {
-    public class LogTicketController : ApiController
+    public class TicketController : ApiController
     {
         static List<Ticket> ticketList = new List<Ticket>();
         // GET: api/LogTicket
@@ -19,7 +19,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate
 
             ticketList.Add(new Ticket
             {
-                employee = new Employee { ID = 1 },
+                User = new User { ID = 1 },
                 Concern = "Software Installation",
                 Department = new Department{ID=1,Name="EBS"},
                 Description = "Not able to connect with bit bucket",
@@ -44,18 +44,9 @@ namespace Espl.Linkup.Web.Controllers.Corporate
         // POST: api/LogTicket
         public IHttpActionResult Post(Ticket value)
         {
-            Ticket result = new Ticket();
-            result.Concern = value.Concern;
-            result.Department = value.Department;
-            result.Description = value.Description;
-            result.Priority = value.Priority;
-            result.CreatedOn = new DateTime(2016, 10, 10);
-            result.Status = value.Status;
-            result.Isclosed = value.Isclosed;
-            result.IsReopen = value.IsReopen;
-            ticketList.Add(result);
-            result.ID = ticketList.Count;
-            return Ok(true);
+            ticketList.Add(value);
+            value.ID = ticketList.Count;
+            return Ok(value);
         }
 
         // PUT: api/LogTicket/5

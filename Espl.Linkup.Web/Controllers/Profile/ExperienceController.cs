@@ -19,7 +19,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
             experienceList.Add(
                 new Experience
                 {
-                    ID = 10133,
+                    ID = 1,
                     StartDate = new DateTime(2012, 06, 12),
                     EndDate = new DateTime(2016, 06, 12),
                     Duration = "4 Years",
@@ -56,10 +56,11 @@ namespace Espl.Linkup.Web.Controllers.Profile
         public IHttpActionResult Put(int id, Experience value)
         {
             Experience result = experienceList.Where(p => p.ID == id).FirstOrDefault();
-            result.Project = result.Project;
-            result.Client = result.Client;
-            result.Role = result.Role;
-            result.Environment = result.Environment;
+            result.Project = value.Project;
+            result.Client = value.Client;
+            result.Role = value.Role;
+            result.Description = value.Description;
+            result.Environment = value.Environment;
             result.StartDate = new DateTime(2012, 06, 12);
             result.EndDate = new DateTime(2016, 06, 12);
             result.Duration = value.Duration;

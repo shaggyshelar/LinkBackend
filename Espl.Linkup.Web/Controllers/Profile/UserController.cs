@@ -1,6 +1,6 @@
 ﻿using Espl.Linkup.Domain.PFs;
 using Espl.Linkup.Domain.Profile.Contact;
-using Espl.Linkup.Domain.Profile.Employee;
+using Espl.Linkup.Domain.Profile.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,17 +10,17 @@ using System.Web.Http;
 
 namespace Espl.Linkup.Web.Controllers.Profile
 {
-    public class EmployeeController : ApiController
+    public class UserController : ApiController
     {
-        static List<Employee> employeeList = new List<Employee>();
-        // GET: api/Employee
+        static List<User> UserList = new List<User>();
+        // GET: api/User
         public IHttpActionResult Get()
         {
 
-            employeeList.Add(
-                new Employee
+            UserList.Add(
+                new User
                 {
-                    ID = 10133,
+                    ID = 1,
                     Name = "Amol",
                     CurrentAdd = "Ravet",
                     ContactNo = "1234567890",
@@ -34,46 +34,46 @@ namespace Espl.Linkup.Web.Controllers.Profile
                 }
                 );
 
-            return Ok(employeeList);
+            return Ok(UserList);
         }
 
-        // GET: api/Employee/5
+        // GET: api/User/5
         public IHttpActionResult Get(int id)
         {
-            var result = employeeList.Where(p => p.ID == id).FirstOrDefault();
+            var result = UserList.Where(p => p.ID == id).FirstOrDefault();
             return Ok(result);
         }
 
-        // POST: api/Employee
-        public IHttpActionResult Post(Employee value)
+        // POST: api/User
+        public IHttpActionResult Post(User value)
         {
-            employeeList.Add(value);
-            value.ID = employeeList.Count;
+            UserList.Add(value);
+            value.ID = UserList.Count;
             return Ok(value);
         }
 
-        // PUT: api/Employee/5
-        public IHttpActionResult Put(int id, Employee value)
+        // PUT: api/User/5
+        public IHttpActionResult Put(int id, User value)
         {
-            Employee result = employeeList.Where(p => p.ID == id).FirstOrDefault();
-            result.Name = result.Name;
-            result.CurrentAdd = result.CurrentAdd;
-            result.ContactNo = result.ContactNo;
-            result.Email = result.Email;
+            User result = UserList.Where(p => p.ID == id).FirstOrDefault();
+            result.Name = value.Name;
+            result.CurrentAdd = value.CurrentAdd;
+            result.ContactNo = value.ContactNo;
+            result.Email = value.Email;
             result.DOB = new DateTime(1988, 11, 28);
-            result.PF = result.PF;
+            result.PF = value.PF;
             result.CareerStartDate = new DateTime(2012, 11, 28);
             result.LastWorkingDayOfPrevEmployer = new DateTime(1988, 11, 27);
-            result.Contact = result.Contact;
-            result.SkypeID = result.SkypeID;
+            result.Contact = value.Contact;
+            result.SkypeID = value.SkypeID;
             return Ok(result);
         }
 
-        // DELETE: api/Employee/5
+        // DELETE: api/User/5
         public IHttpActionResult Delete(int id)
         {
-            Employee result = employeeList.Where(p => p.ID == id).FirstOrDefault();
-            var resultflag = employeeList.Remove(result);
+            User result = UserList.Where(p => p.ID == id).FirstOrDefault();
+            var resultflag = UserList.Remove(result);
             return Ok(resultflag);
         }
     }

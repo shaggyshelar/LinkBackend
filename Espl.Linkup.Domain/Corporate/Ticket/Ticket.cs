@@ -25,7 +25,7 @@ namespace Espl.Linkup.Domain.Corporate.Ticket
         public Enum Priority { get; set; }
         public string Concern { get; set; }
         public string Description { get; set; }
-        public Common.Employee.IEmployee ResolvedBy { get; set; }
+        public Common.Users.IUser ResolvedBy { get; set; }
         public bool Isclosed { get; set; }
         public bool IsReopen { get; set; }
         public string Status { get; set; }

@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace Espl.Linkup.Web.Controllers.Corporate
+namespace Espl.Linkup.Web.Controllers.Master
 {
     public class PFController : ApiController
     {

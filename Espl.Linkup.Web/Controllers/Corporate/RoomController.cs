@@ -44,7 +44,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate.Rooms
             result.Name = value.Name;
             roomList.Add(result);
             result.ID = roomList.Count;
-            return Ok(result.ID);
+            return Ok(result);
         }
 
         // PUT: api/Room/5

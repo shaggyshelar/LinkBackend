@@ -77,7 +77,7 @@ namespace Espl.Linkup.Web.Tests.Controllers
 
             Espl.Linkup.Domain.Leaves.Leave leaveObj = new Espl.Linkup.Domain.Leaves.Leave
             {
-                ID=1,
+                ID = 1,
                 NumberOfLeave = 12,
                 Reason = "Put request sucessfull",
                 Status = "Approved",
@@ -85,7 +85,7 @@ namespace Espl.Linkup.Web.Tests.Controllers
                 EndDate = new DateTime(2016, 12, 18)
 
             };
-            var actResult = controller.Post(leaveObj);
+            var actResult = controller.Put(1, leaveObj);
             // Act
             var result = actResult as OkNegotiatedContentResult<Espl.Linkup.Domain.Leaves.Leave>;
 
@@ -108,7 +108,7 @@ namespace Espl.Linkup.Web.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.IsTrue(result.Content== true);
+            Assert.IsTrue(result.Content == true);
         }
 
     }

@@ -1,9 +1,9 @@
 ﻿using Espl.Linkup.Common.Corporate.Treatments;
-using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.Users;
 using Espl.Linkup.Domain.Classes;
 using Espl.Linkup.Domain.Corporate.Treatments;
 using Espl.Linkup.Domain.Countries;
-using Espl.Linkup.Domain.Profile.Employee;
+using Espl.Linkup.Domain.Profile.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace Espl.Linkup.Web.Controllers.Corporate
+namespace Espl.Linkup.Web.Controllers.Master
 {
     public class ClassController : ApiController
     {
@@ -47,7 +47,7 @@ namespace Espl.Linkup.Web.Controllers.Corporate
         {
             classList.Add(value);
             value.ID = classList.Count;
-            return Ok(value.ID);
+            return Ok(value);
         }
 
         // PUT: api/Class/5

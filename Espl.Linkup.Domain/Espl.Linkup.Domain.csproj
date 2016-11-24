@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Feature\Feature.cs" />
+    <Compile Include="Admin\Feature\FeatureSearch.cs" />
     <Compile Include="Admin\Role\Role.cs" />
     <Compile Include="Admin\Role\RoleSearch.cs" />
     <Compile Include="Admin\State\State.cs" />
@@ -100,8 +102,8 @@
     <Compile Include="Profile\Experience\ExperienceSearch.cs" />
     <Compile Include="Profile\EmploymentHistory\EmploymentHistory.cs" />
     <Compile Include="Profile\EmploymentHistory\EmploymentHistorySearch.cs" />
-    <Compile Include="Profile\Employee\Employee.cs" />
-    <Compile Include="Profile\Employee\EmployeeSearch.cs" />
+    <Compile Include="Profile\User\User.cs" />
+    <Compile Include="Profile\User\UserSearch.cs" />
     <Compile Include="Profile\Education\Education.cs" />
     <Compile Include="Profile\Education\EducationSearch.cs" />
     <Compile Include="Profile\Certification\Certification.cs" />

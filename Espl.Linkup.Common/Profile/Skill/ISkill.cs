@@ -1,5 +1,5 @@
 ﻿using Espl.Linkup.Common.Core;
-using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.Users;
 using Espl.Linkup.Common.SkillTypes;
 using System;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ namespace Espl.Linkup.Common.Skill
         //
         string Description { get; set; }
         ISkillType Type { get; set; }
-        IList<IEmployee> Approvers { get; set; }
+        IList<IUser> Approvers { get; set; }
         string Status { get; set; }
         string Comments { get; set; }
 

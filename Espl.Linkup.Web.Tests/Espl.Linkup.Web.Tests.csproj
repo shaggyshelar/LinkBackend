@@ -91,11 +91,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Admin\CountryControllerTest.cs" />
+    <Compile Include="Controllers\Admin\FeatureControllerTest.cs" />
+    <Compile Include="Controllers\Admin\RoleControllerTest.cs" />
+    <Compile Include="Controllers\Corporate\TreatmentControllerTest.cs" />
+    <Compile Include="Controllers\Corporate\RoomControllerTest.cs" />
+    <Compile Include="Controllers\Corporate\TicketControllerTest.cs" />
+    <Compile Include="Controllers\Corporate\ConferenceControllerTest.cs" />
     <Compile Include="Controllers\Leave\HolidayControllerTest.cs" />
     <Compile Include="Controllers\Leave\LeaveDetailControllerTest.cs" />
     <Compile Include="Controllers\Leave\LeaveControllerTest.cs" />
+    <Compile Include="Controllers\Master\SkillTypeControllerTest.cs" />
+    <Compile Include="Controllers\Master\IDProofTypeControllerTest.cs" />
+    <Compile Include="Controllers\Master\DepartmentControllerTest.cs" />
+    <Compile Include="Controllers\Master\ContactTypeControllerTest.cs" />
+    <Compile Include="Controllers\Master\ClientControllerTest.cs" />
+    <Compile Include="Controllers\Master\ClassControllerTest.cs" />
+    <Compile Include="Controllers\Profile\VisaControllerTest.cs" />
+    <Compile Include="Controllers\Profile\UserControllerTest.cs" />
+    <Compile Include="Controllers\Profile\UANControllerTest.cs" />
+    <Compile Include="Controllers\Profile\SkillControllerTest.cs" />
+    <Compile Include="Controllers\Profile\PassportControllerTest.cs" />
+    <Compile Include="Controllers\Profile\NomineeControllerTest.cs" />
+    <Compile Include="Controllers\Profile\IDProofControllerTest.cs" />
+    <Compile Include="Controllers\Profile\ExperienceControllerTest.cs" />
+    <Compile Include="Controllers\Profile\EmploymentHistoryControllerTest.cs" />
+    <Compile Include="Controllers\Profile\EducationControllerTest.cs" />
+    <Compile Include="Controllers\Profile\CertificationControllerTest.cs" />
+    <Compile Include="Controllers\Profile\AddressControllerTest.cs" />
+    <Compile Include="Controllers\Profile\AchievementControllerTest.cs" />
+    <Compile Include="Controllers\Project\ProjectControllerTest.cs" />
+    <Compile Include="Controllers\Project\Task\TaskControllerTest.cs" />
+    <Compile Include="Controllers\Timesheet\TimesheetControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -117,9 +145,7 @@
       <Name>Espl.Linkup.Web</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\Corporate\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

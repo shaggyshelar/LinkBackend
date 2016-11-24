@@ -1,5 +1,5 @@
-﻿using Espl.Linkup.Common.Employee;
-using Espl.Linkup.Domain.Profile.Employee;
+﻿using Espl.Linkup.Common.Users;
+using Espl.Linkup.Domain.Profile.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace Espl.Linkup.Web.Controllers.Leaves
         // GET: api/Leave
         public IHttpActionResult Get()
         {
-            IEmployee emp = new Employee();
+            IUser emp = new User();
             emp.Name = "Amol";
             emp.ID = 101;
             leaveList.Add(new Espl.Linkup.Domain.Leaves.Leave
@@ -25,7 +25,7 @@ namespace Espl.Linkup.Web.Controllers.Leaves
                 NumberOfLeave = 12,
                 Reason = "Sample",
                 Status = "Approved",
-                Employee = emp,
+                User = emp,
                 StartDate = new DateTime(2016, 12, 12),
                 EndDate = new DateTime(2016,12,18)
 
@@ -36,7 +36,7 @@ namespace Espl.Linkup.Web.Controllers.Leaves
                 NumberOfLeave = 12,
                 Reason = "Sample Demo",
                 Status = "Approved",
-                Employee = emp,
+                User = emp,
                 StartDate = new DateTime(2016,11, 12),
                 EndDate = new DateTime(2016,11,18)
             });
@@ -63,11 +63,11 @@ namespace Espl.Linkup.Web.Controllers.Leaves
         {
             Espl.Linkup.Domain.Leaves.Leave result = leaveList.Where(p => p.ID == id).FirstOrDefault();
             result.ID = value.ID;
-            result.NumberOfLeave = result.NumberOfLeave;
-            result.Reason = result.Reason;
-            result.Status = result.Status;
-            result.StartDate = result.StartDate;
-            result.EndDate = result.EndDate;
+            result.NumberOfLeave = value.NumberOfLeave;
+            result.Reason = value.Reason;
+            result.Status = value.Status;
+            result.StartDate = value.StartDate;
+            result.EndDate = value.EndDate;
             return Ok(result);
         }
 

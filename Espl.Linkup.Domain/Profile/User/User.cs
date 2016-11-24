@@ -1,4 +1,4 @@
-﻿using Espl.Linkup.Common.Employee;
+﻿using Espl.Linkup.Common.Users;
 using Espl.Linkup.Common.PFs;
 using Espl.Linkup.Domain.Core;
 using System;
@@ -7,15 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Espl.Linkup.Domain.Profile.Employee
+namespace Espl.Linkup.Domain.Profile.Users
 {
 
-    public class Employee : BaseEntity<IEmployee, IEmployeeSearch>, IEmployee
+    public class User : BaseEntity<IUser, IUserSearch>, IUser
     {
 
-        protected override IBaseDao<IEmployee, IEmployeeSearch> GetDAO()
+        protected override IBaseDao<IUser, IUserSearch> GetDAO()
         {
-            //return DaoFactoryProvider.CreateInstance().GetDao<IEmployeeDAO>();
+            //return DaoFactoryProvider.CreateInstance().GetDao<IUserDAO>();
             throw new NotImplementedException();
         }
 
@@ -33,5 +33,7 @@ namespace Espl.Linkup.Domain.Profile.Employee
         public string SkypeID { get; set; }
         public string ProfilePath { get; set; }
         public Common.Contacts.IContact Contact { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
     }
 }

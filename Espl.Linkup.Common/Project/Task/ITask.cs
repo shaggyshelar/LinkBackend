@@ -1,5 +1,5 @@
 ﻿using Espl.Linkup.Common.Core;
-using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace Espl.Linkup.Common.Projects.Tasks
     {
         #region Properties
         //
-        string TaskName { get; set; }
+        string Name { get; set; }
         IProject Project { get; set; }
         #endregion Properties
     }

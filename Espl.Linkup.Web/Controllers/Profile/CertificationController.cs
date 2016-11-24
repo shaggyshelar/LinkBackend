@@ -21,7 +21,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
                 {
                     ID = 1,
                     Code = "70-480",
-                    Date = new DateTime().AddDays(-10),
+                    Date = DateTime.Now.AddDays(-10),
                     Status = "Approved",
                     Comments = "Great"
                 }
@@ -50,7 +50,8 @@ namespace Espl.Linkup.Web.Controllers.Profile
         {
             Certification result = certificationList.Where(p => p.ID == id).FirstOrDefault();
             result.Code = value.Code;
-            result.Date = new DateTime().AddDays(-10);
+            result.Name = value.Name;
+            result.Date = DateTime.Now.AddDays(-10);
             result.Status = value.Status;
             result.Comments = value.Comments;
             return Ok(result);

@@ -18,7 +18,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
             employmentHistoryList.Add(
                 new EmploymentHistory
                 {
-                    ID = 10133,
+                    ID = 1,
                     EmploymentDetail = "google",
                     Designation = "Developer",
                     StartDate = new DateTime(2012, 06, 12),

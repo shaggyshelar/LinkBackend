@@ -1,7 +1,7 @@
 ﻿
 using Espl.Linkup.Common.Corporate.Conferences;
 using Espl.Linkup.Common.Corporate.Treatments;
-using Espl.Linkup.Common.Employee;
+using Espl.Linkup.Common.Users;
 using Espl.Linkup.Domain.Core;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace Espl.Linkup.Domain.Corporate.Conferences
         public string Title { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public IList<IEmployee> Attendees { get; set; }
+        public IList<IUser> Attendees { get; set; }
         public string Description { get; set; }
         public IList<ITreatment> SpecialTreatment { get; set; }
         public string SpecialComments { get; set; }

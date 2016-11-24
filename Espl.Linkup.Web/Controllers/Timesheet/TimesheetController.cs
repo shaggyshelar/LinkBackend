@@ -20,7 +20,7 @@ namespace Espl.Linkup.Web.Controllers.Timesheets
             timesheetList.Add(new Timesheet
             {
                 Project = new Project { ID = 1, Name = "First" },
-                Task = new Task { ID = 1, Project = new Project { ID = 1 }, TaskName = "Development" },
+                Task = new Task { ID = 1, Project = new Project { ID = 1 }, Name = "Development" },
                 TimesheetGroupID = 1,
                 MondayBNote = "This is sample task for project",
                 TuesdayBNote = "This is sample task for project",
@@ -64,7 +64,7 @@ namespace Espl.Linkup.Web.Controllers.Timesheets
             timesheetList.Add(new Timesheet
             {
                 Project = new Project { ID = 2, Name = "Second" },
-                Task = new Task { ID = 1, Project = new Project { ID = 1 }, TaskName = "Development" },
+                Task = new Task { ID = 1, Project = new Project { ID = 1 }, Name = "Development" },
                 TimesheetGroupID = 1,
                 MondayBNote = "This is sample task for project",
                 TuesdayBNote = "This is sample task for project",
@@ -82,8 +82,7 @@ namespace Espl.Linkup.Web.Controllers.Timesheets
                 SundayBTime = new TimeSpan(2, 14, 00),
                 MondayNBNote = "This is sample task for project",
                 TuesdayNBNote = "This is sample task for project",
-                WednesdayNBNote
-                = "This is sample task for project",
+                WednesdayNBNote = "This is sample task for project",
                 ThursdayNBNote = "This is sample task for project",
                 FridayNBNote = "This is sample task for project",
                 SaturdayNBNote = "This is sample task for project",
@@ -122,7 +121,7 @@ namespace Espl.Linkup.Web.Controllers.Timesheets
             Timesheet result = new Timesheet();
             timesheetList.Add(result);
             result.ID = timesheetList.Count;
-            return Ok(result.ID);
+            return Ok(result);
         }
 
         // PUT: api/Timesheet/5

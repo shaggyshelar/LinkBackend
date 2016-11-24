@@ -17,18 +17,18 @@ namespace Espl.Linkup.Web.Controllers.Projects.Tasks
 
             taskList.Add(new Task
             {
-                TaskName = "Development",
+                Name = "Development",
                 ID = 1
             });
             taskList.Add(new Task
             {
-                TaskName = "Req Analysis",
+                Name = "Req Analysis",
                 ID = 2
             });
 
             taskList.Add(new Task
             {
-                TaskName = "Deployment",
+                Name = "Deployment",
                 ID = 2
             });
 
@@ -46,17 +46,17 @@ namespace Espl.Linkup.Web.Controllers.Projects.Tasks
         public IHttpActionResult Post(Task value)
         {
             Task result = new Task();
-            result.TaskName = value.TaskName;
+            result.Name = value.Name;
             taskList.Add(result);
             result.ID = taskList.Count;
-            return Ok(result.ID);
+            return Ok(result);
         }
 
         // PUT: api/Task/5
         public IHttpActionResult Put(int id, Task value)
         {
             Task result = taskList.Where(p => p.ID == id).FirstOrDefault();
-            result.TaskName = value.TaskName;
+            result.Name = value.Name;
             return Ok(result);
         }
 

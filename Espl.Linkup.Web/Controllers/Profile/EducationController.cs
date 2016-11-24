@@ -32,6 +32,7 @@ namespace Espl.Linkup.Web.Controllers.Profile
             educationList.Add(
                 new Education
                 {
+                    ID=1,
                     Class = new Class { ID = 1, Name = "Graduation" },
                     Degree = "BSC Computer Science",
                     Grade = "First Class",

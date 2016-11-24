@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Espl.Linkup.Common.Employee
+namespace Espl.Linkup.Common.Features
 {
-    public interface IEmployeeSearch : IBaseSearch
+    public interface IFeatureSearch : IBaseSearch
     {
 
     }
