@@ -58,6 +58,8 @@
     <Compile Include="Corporate\Ticket\ITicketSearch.cs" />
     <Compile Include="Corporate\Treatment\ITreatment.cs" />
     <Compile Include="Corporate\Treatment\ITreatmentSearch.cs" />
+    <Compile Include="Leave\Approver\IApprover.cs" />
+    <Compile Include="Leave\Approver\IApproverSearch.cs" />
     <Compile Include="Leave\Holiday\IHolidaySearch.cs" />
     <Compile Include="Leave\Holiday\IHoliday.cs" />
     <Compile Include="Leave\ILeave.cs" />

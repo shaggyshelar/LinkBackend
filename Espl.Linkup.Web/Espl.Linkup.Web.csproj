@@ -128,6 +128,7 @@
     <Compile Include="Controllers\Corporate\TicketController.cs" />
     <Compile Include="Controllers\Corporate\RoomController.cs" />
     <Compile Include="Controllers\Corporate\TreatmentController.cs" />
+    <Compile Include="Controllers\Leave\ApproverController.cs" />
     <Compile Include="Controllers\Leave\HolidayController.cs" />
     <Compile Include="Controllers\Leave\LeaveController.cs" />
     <Compile Include="Controllers\Leave\LeaveDetailController.cs" />

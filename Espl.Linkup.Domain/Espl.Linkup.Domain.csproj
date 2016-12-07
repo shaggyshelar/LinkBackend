@@ -58,6 +58,8 @@
     <Compile Include="Corporate\Treatment\Treatment.cs" />
     <Compile Include="Corporate\Treatment\TreatmentSearch.cs" />
     <Compile Include="Enum\Enum.cs" />
+    <Compile Include="Leave\Approver\Approver.cs" />
+    <Compile Include="Leave\Approver\ApproverSearch.cs" />
     <Compile Include="Master\Client\Client.cs" />
     <Compile Include="Master\Client\ClientSearch.cs" />
     <Compile Include="Master\Class\Class.cs" />

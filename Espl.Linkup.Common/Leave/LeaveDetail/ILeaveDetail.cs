@@ -17,6 +17,7 @@ namespace Espl.Linkup.Common.Leave.LeaveDetail
         Int32 HalfDayLeave { get; set; }
         Int32 Absent { get; set; }
         Int32 HalfDayAbsent { get; set; }
+        Int32 NumberOfLeaveBal { get; set; }
         #endregion Properties
     }
 }

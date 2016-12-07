@@ -12,23 +12,17 @@ namespace Espl.Linkup.Domain.Leaves.LeaveDetail
     public class LeaveDetail : BaseEntity<ILeaveDetail, ILeaveDetailSearch>,ILeaveDetail
     {
 
-
         protected override IBaseDao<ILeaveDetail, ILeaveDetailSearch> GetDAO()
         {
             //return DaoFactoryProvider.CreateInstance().GetDao<ILeaveDetailDAO>();
             throw new NotImplementedException();
         }
 
-
-
         public IList<Common.Leaves.ILeave> Leavelst { get; set; }
-
         public int NumberOfLeave { get; set; }
-
         public int HalfDayLeave { get; set; }
-
+        public int NumberOfLeaveBal { get; set; }
         public int Absent { get; set; }
-
         public int HalfDayAbsent { get; set; }
     }
 }

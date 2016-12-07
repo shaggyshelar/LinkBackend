@@ -1,4 +1,5 @@
 ﻿using Espl.Linkup.Common.Core;
+using Espl.Linkup.Common.Leaves.Approvers;
 using Espl.Linkup.Common.Users;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Espl.Linkup.Common.Leaves
     {
         #region Properties
         //
-        IUser User { get; set; }
+        IList<IApprover> Approvers { get; set; }
         DateTime StartDate { get; set; }
         DateTime EndDate { get; set; }
         Int64 NumberOfLeave { get; set; }

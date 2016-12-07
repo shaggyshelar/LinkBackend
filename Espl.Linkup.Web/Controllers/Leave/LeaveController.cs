@@ -1,5 +1,8 @@
-﻿using Espl.Linkup.Common.Users;
+﻿using Espl.Linkup.Common.Leaves.Approvers;
+using Espl.Linkup.Common.Users;
+using Espl.Linkup.Domain.Leave.Approvers;
 using Espl.Linkup.Domain.Profile.Users;
+using Espl.Linkup.Domain.Projects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +15,28 @@ namespace Espl.Linkup.Web.Controllers.Leaves
 {
     public class LeaveController : ApiController
     {
+        static List<IApprover> ApproverList = new List<IApprover>();
         static List<Espl.Linkup.Domain.Leaves.Leave> leaveList = new List<Espl.Linkup.Domain.Leaves.Leave>();
         // GET: api/Leave
         public IHttpActionResult Get()
         {
+
+
+            ApproverList.Add(new Approver
+            {
+                ID = 1,
+                Project = new Project { ID = 1, Name = "First", Manager = new User { ID = 1, Name = "Test manager" } },
+                Status = false,
+                Leave = new Espl.Linkup.Domain.Leaves.Leave { ID = 1 }
+            });
+            ApproverList.Add(new Approver
+            {
+                ID = 2,
+                Project = new Project { ID = 2, Name = "Second", Manager = new User { ID = 1, Name = "Test manager" } },
+                Status = true,
+                Leave = new Espl.Linkup.Domain.Leaves.Leave { ID = 1 }
+
+            });
             IUser emp = new User();
             emp.Name = "Amol";
             emp.ID = 101;
@@ -27,8 +48,8 @@ namespace Espl.Linkup.Web.Controllers.Leaves
                 Status = "Approved",
                 User = emp,
                 StartDate = new DateTime(2016, 12, 12),
-                EndDate = new DateTime(2016,12,18)
-
+                EndDate = new DateTime(2016,12,18),
+                Approvers=ApproverList
             });
             leaveList.Add(new Espl.Linkup.Domain.Leaves.Leave
             {
